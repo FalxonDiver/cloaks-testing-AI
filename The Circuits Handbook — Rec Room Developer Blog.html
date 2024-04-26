@@ -1,0 +1,2643 @@
+<!doctype html>
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US"  class="touch-styles">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- This is Squarespace. --><!-- koala-gazelle-6pxg -->
+<base href="">
+<meta charset="utf-8" />
+<title>The Circuits Handbook &mdash; Rec Room Developer Blog</title>
+<meta http-equiv="Accept-CH" content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" /><link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1604698533321-IXH1ZOV8NF2K19JRN9YE/favicon.ico"/>
+<link rel="canonical" href="https://blog.recroom.com/posts/2021/5/03/the-circuits-handbook"/>
+<meta property="og:site_name" content="Rec Room Developer Blog"/>
+<meta property="og:title" content="The Circuits Handbook &mdash; Rec Room Developer Blog"/>
+<meta property="og:latitude" content="40.7207559"/>
+<meta property="og:longitude" content="-74.0007613"/>
+<meta property="og:locality" content=""/>
+<meta property="og:url" content="https://blog.recroom.com/posts/2021/5/03/the-circuits-handbook"/>
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="This document is a broad overview of the Circuits system - covering all the important concepts and entities you need to know about!"/>
+<meta property="og:image" content="http://static1.squarespace.com/static/5fa5929d1cf2d45763f942cf/t/608b3ae8d8dc240c3fbd0a03/1619737337593/image3.png?format=1500w"/>
+<meta property="og:image:width" content="1270"/>
+<meta property="og:image:height" content="670"/>
+<meta itemprop="name" content="The Circuits Handbook — Rec Room Developer Blog"/>
+<meta itemprop="url" content="https://blog.recroom.com/posts/2021/5/03/the-circuits-handbook"/>
+<meta itemprop="description" content="This document is a broad overview of the Circuits system - covering all the important concepts and entities you need to know about!"/>
+<meta itemprop="thumbnailUrl" content="http://static1.squarespace.com/static/5fa5929d1cf2d45763f942cf/t/608b3ae8d8dc240c3fbd0a03/1619737337593/image3.png?format=1500w"/>
+<link rel="image_src" href="http://static1.squarespace.com/static/5fa5929d1cf2d45763f942cf/t/608b3ae8d8dc240c3fbd0a03/1619737337593/image3.png?format=1500w" />
+<meta itemprop="image" content="http://static1.squarespace.com/static/5fa5929d1cf2d45763f942cf/t/608b3ae8d8dc240c3fbd0a03/1619737337593/image3.png?format=1500w"/>
+<meta itemprop="author" content="Cameron Brown"/>
+<meta itemprop="datePublished" content="2021-05-03T20:00:00-0700"/>
+<meta itemprop="dateModified" content="2022-06-09T10:57:13-0700"/>
+<meta itemprop="headline" content="The Circuits Handbook"/>
+<meta itemprop="publisher" content="Rec Room Developer Blog"/>
+<meta name="twitter:title" content="The Circuits Handbook — Rec Room Developer Blog"/>
+<meta name="twitter:image" content="http://static1.squarespace.com/static/5fa5929d1cf2d45763f942cf/t/608b3ae8d8dc240c3fbd0a03/1619737337593/image3.png?format=1500w"/>
+<meta name="twitter:url" content="https://blog.recroom.com/posts/2021/5/03/the-circuits-handbook"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="This document is a broad overview of the Circuits system - covering all the important concepts and entities you need to know about!"/>
+<meta name="description" content="This document is a broad overview of the Circuits system - covering all the 
+important concepts and entities you need to know about!" />
+<link rel="preconnect" href="https://images.squarespace-cdn.com">
+<script type="text/javascript" src="//use.typekit.net/ik/vNoWLwml6bBuecCU-BAGHUemF45O_iftarMJ692xmDwfelIIfFHN4UJLFRbh52jhWDmcjQ9owR8qwAFcwcbXFQShwhjoF24RZy79MkG0jAFu-WsoShFGZAsude80ZkoRdhXCHKoyjamTiY8Djhy8ZYmC-Ao1Oco8if37OcBDOcu8OfG0-hNydeIlZhBEZAUCZPXhSYy1O1FUiABkZWF3jAF8OcFzdP37O1FUiABkZWF3jAF8ShFGZAsude80ZkoRdhXCjAFu-WsoShFGZAsude80ZkoRdhXCjAFu-WsoShFGZAsude80Zko0ZWbCjWw0dA9CjcUzZkokZAFkdhNlOcFzdPUndhBCjPu1jWT8deU8OQZ3peS0SaBujW48Sagyjh90jhNlOeUzjhBC-eNDifUDSWmyScmDSeBRZWFR-emqiAUTdcS0jhNlOYiaikoyjamTiY8Djhy8ZYmC-Ao1OcFzdPUaiaS0jAFu-WsoShFGZAsude80Zko0ZWbCiaiaOcBDOcu8OYiaikoKdeN1O148ja4zdhX0jhNlOYiaikondhBCjPu1jWT8deU8OQZ3peS0SaBujW48Sagyjh90jhNlOYiaikoDSWmyScmDSeBRZWFR-emqiAUTdcS0jhNlJ68ciWsuScIlSYbKgcmuScN3jPG4fJZmIMMjMkMfH6qJyB9bMg6IJMJ7fbRxmgMMeM96MKG4f54oIMMjgKMfH6qJ6m9bMg6YJMJ7fbKMmsMMeMv6MKG4fJ4mIMMjIPMfH6qJ7WqbMs62JMJ7fbKGpsMgeMS6MKGHf55eMsMgeMX6MKGHf5AeMsMgegI6MTMg3lOHxb9.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript" crossorigin="anonymous" nomodule="nomodule" src="//assets.squarespace.com/@sqs/polyfiller/1.6/legacy.js"></script>
+<script type="text/javascript" crossorigin="anonymous" src="//assets.squarespace.com/@sqs/polyfiller/1.6/modern.js"></script>
+<script type="text/javascript">SQUARESPACE_ROLLUPS = {};</script>
+<script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/extract-css-runtime-8efe63ed0b3e620cd133-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-extract_css_runtime');</script>
+<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/extract-css-runtime-8efe63ed0b3e620cd133-min.en-US.js" ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/extract-css-moment-js-vendor-6f117db4eb7fd4392375-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-extract_css_moment_js_vendor');</script>
+<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/extract-css-moment-js-vendor-6f117db4eb7fd4392375-min.en-US.js" ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/cldr-resource-pack-e94539391642d3b99900-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-cldr_resource_pack');</script>
+<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/cldr-resource-pack-e94539391642d3b99900-min.en-US.js" ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-70736932c490ae0713e6-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-common_vendors_stable');</script>
+<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-70736932c490ae0713e6-min.en-US.js" ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/common-vendors-24ffb21b424f235e16e6-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-common_vendors');</script>
+<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/common-vendors-24ffb21b424f235e16e6-min.en-US.js" ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/common-84768f53feefc7100306-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-common');</script>
+<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/common-84768f53feefc7100306-min.en-US.js" ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/performance-1954d7801b9fe28cb073-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-performance');</script>
+<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/performance-1954d7801b9fe28cb073-min.en-US.js" defer ></script><script data-name="static-context">Static = window.Static || {}; Static.SQUARESPACE_CONTEXT = {"facebookAppId":"314192535267336","facebookApiVersion":"v6.0","rollups":{"squarespace-announcement-bar":{"js":"//assets.squarespace.com/universal/scripts-compressed/announcement-bar-4789a12096f1297e4c1b-min.en-US.js"},"squarespace-audio-player":{"css":"//assets.squarespace.com/universal/styles-compressed/audio-player-9fb16b1675c0ff315dae-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/audio-player-db745857afb2ec3ffb4f-min.en-US.js"},"squarespace-blog-collection-list":{"css":"//assets.squarespace.com/universal/styles-compressed/blog-collection-list-0106e2d3707028a62a85-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/blog-collection-list-0ac0afef4825691a4645-min.en-US.js"},"squarespace-calendar-block-renderer":{"css":"//assets.squarespace.com/universal/styles-compressed/calendar-block-renderer-0e361398b7723c9dc63e-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/calendar-block-renderer-9e7074f1bb18f7222944-min.en-US.js"},"squarespace-chartjs-helpers":{"css":"//assets.squarespace.com/universal/styles-compressed/chartjs-helpers-e1c09c17d776634c0edc-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/chartjs-helpers-65c9630464ac844f013c-min.en-US.js"},"squarespace-comments":{"css":"//assets.squarespace.com/universal/styles-compressed/comments-24b74a0326eae0cd5049-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/comments-9b34dfd319c824fabec4-min.en-US.js"},"squarespace-custom-css-popup":{"css":"//assets.squarespace.com/universal/styles-compressed/custom-css-popup-428274a2711c6437783f-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/custom-css-popup-b766d6545189551b5307-min.en-US.js"},"squarespace-dialog":{"css":"//assets.squarespace.com/universal/styles-compressed/dialog-081be79078914b908a1a-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/dialog-fe64d18b463750f00fa8-min.en-US.js"},"squarespace-events-collection":{"css":"//assets.squarespace.com/universal/styles-compressed/events-collection-0e361398b7723c9dc63e-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/events-collection-93991cf619906e47c736-min.en-US.js"},"squarespace-form-rendering-utils":{"js":"//assets.squarespace.com/universal/scripts-compressed/form-rendering-utils-f5feb8e07e62e77fe5b8-min.en-US.js"},"squarespace-forms":{"css":"//assets.squarespace.com/universal/styles-compressed/forms-8d93ba2c12ff0765b64c-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/forms-456f8a096c32579b1685-min.en-US.js"},"squarespace-gallery-collection-list":{"css":"//assets.squarespace.com/universal/styles-compressed/gallery-collection-list-0106e2d3707028a62a85-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/gallery-collection-list-4015fa07502fd85cce51-min.en-US.js"},"squarespace-image-zoom":{"css":"//assets.squarespace.com/universal/styles-compressed/image-zoom-0106e2d3707028a62a85-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/image-zoom-9c7b93bd6c6eec5cef37-min.en-US.js"},"squarespace-pinterest":{"css":"//assets.squarespace.com/universal/styles-compressed/pinterest-0106e2d3707028a62a85-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/pinterest-0e346e0a347887bb4ffd-min.en-US.js"},"squarespace-popup-overlay":{"css":"//assets.squarespace.com/universal/styles-compressed/popup-overlay-b2bf7df4402e207cd72c-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/popup-overlay-4799076ff5857c7e22af-min.en-US.js"},"squarespace-product-quick-view":{"css":"//assets.squarespace.com/universal/styles-compressed/product-quick-view-4aec27f1bd826750e9db-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/product-quick-view-22d395fb29d79725739b-min.en-US.js"},"squarespace-products-collection-item-v2":{"css":"//assets.squarespace.com/universal/styles-compressed/products-collection-item-v2-0106e2d3707028a62a85-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/products-collection-item-v2-4f86cb20877dafd2ae07-min.en-US.js"},"squarespace-products-collection-list-v2":{"css":"//assets.squarespace.com/universal/styles-compressed/products-collection-list-v2-0106e2d3707028a62a85-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/products-collection-list-v2-5869a38a2bb3cda993d1-min.en-US.js"},"squarespace-search-page":{"css":"//assets.squarespace.com/universal/styles-compressed/search-page-dcc0462e30efbd6dc562-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/search-page-f94e3291d677fe675699-min.en-US.js"},"squarespace-search-preview":{"js":"//assets.squarespace.com/universal/scripts-compressed/search-preview-2b67577a9b5c8b3e7ba3-min.en-US.js"},"squarespace-simple-liking":{"css":"//assets.squarespace.com/universal/styles-compressed/simple-liking-a9eb87c1b73b199ce387-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/simple-liking-78c29e2a12a5aa2a2d61-min.en-US.js"},"squarespace-social-buttons":{"css":"//assets.squarespace.com/universal/styles-compressed/social-buttons-98ee3a678d356d849b76-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/social-buttons-5386c2973db284d2c70a-min.en-US.js"},"squarespace-tourdates":{"css":"//assets.squarespace.com/universal/styles-compressed/tourdates-0106e2d3707028a62a85-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/tourdates-0c994a49c22d3424ca65-min.en-US.js"},"squarespace-website-overlays-manager":{"css":"//assets.squarespace.com/universal/styles-compressed/website-overlays-manager-6dfb472f441e39d78b13-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/website-overlays-manager-e40477de1ab3fc552e37-min.en-US.js"}},"pageType":50,"website":{"id":"5fa5929d1cf2d45763f942cf","identifier":"koala-gazelle-6pxg","websiteType":1,"contentModifiedOn":1711654885360,"cloneable":false,"hasBeenCloneable":false,"siteStatus":{},"language":"en-US","timeZone":"America/Los_Angeles","machineTimeZoneOffset":-25200000,"timeZoneOffset":-25200000,"timeZoneAbbr":"PDT","siteTitle":"Rec Room Developer Blog","fullSiteTitle":"The Circuits Handbook \u2014 Rec Room Developer Blog","siteTagLine":"Welcome to the Rec Room developer blog.","siteDescription":"","logoImageId":"5fa5953a1cf2d45763f97bcc","socialLogoImageId":"5fa5c1aeeea05a637b08f5b4","shareButtonOptions":{"8":true,"1":true,"3":true,"4":true,"2":true,"6":true,"7":true},"logoImageUrl":"//images.squarespace-cdn.com/content/v1/582e7271bebafbd72792bd97/1571873579729-YGLX8EAT3EP2LIFJ7EZQ/RecRoomLogo_Shadow.png","socialLogoImageUrl":"//images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1604698542397-XV55W2BD8IUBIXTWVXID/OC%2BLANDSCAPE.jpg","authenticUrl":"https://blog.recroom.com","internalUrl":"https://koala-gazelle-6pxg.squarespace.com","baseUrl":"https://blog.recroom.com","primaryDomain":"blog.recroom.com","sslSetting":3,"isHstsEnabled":false,"socialAccounts":[{"serviceId":43,"screenname":"Reddit","addedOn":1604697124266,"profileUrl":"http://reddit.com/r/RecRoom","iconEnabled":true,"serviceName":"reddit"},{"serviceId":74,"screenname":"URL","addedOn":1604697132931,"profileUrl":"http://discord.gg/DQqfpkh","iconEnabled":true,"serviceName":"url"},{"serviceId":74,"screenname":"URL","addedOn":1604697139535,"profileUrl":"http://recroom.canny.io/","iconEnabled":true,"serviceName":"url"},{"serviceId":62,"screenname":"Twitter","addedOn":1604697142589,"profileUrl":"http://twitter.com/recroom","iconEnabled":true,"serviceName":"twitter-unauth"}],"typekitId":"","statsMigrated":false,"imageMetadataProcessingEnabled":false,"captchaSettings":{"enabledForDonations":false},"showOwnerLogin":false},"websiteSettings":{"id":"5fa5929d1cf2d45763f942d2","websiteId":"5fa5929d1cf2d45763f942cf","subjects":[],"country":"US","state":"WA","simpleLikingEnabled":true,"mobileInfoBarSettings":{"isContactEmailEnabled":false,"isContactPhoneNumberEnabled":false,"isLocationEnabled":false,"isBusinessHoursEnabled":false},"commentLikesAllowed":true,"commentAnonAllowed":true,"commentThreaded":true,"commentApprovalRequired":false,"commentAvatarsOn":true,"commentSortType":2,"commentFlagThreshold":0,"commentFlagsAllowed":true,"commentEnableByDefault":true,"commentDisableAfterDaysDefault":0,"disqusShortname":"","commentsEnabled":true,"storeSettings":{"returnPolicy":null,"termsOfService":null,"privacyPolicy":null,"expressCheckout":false,"continueShoppingLinkUrl":"/","useLightCart":false,"showNoteField":false,"shippingCountryDefaultValue":"US","billToShippingDefaultValue":false,"showShippingPhoneNumber":true,"isShippingPhoneRequired":false,"showBillingPhoneNumber":true,"isBillingPhoneRequired":false,"currenciesSupported":["USD","CAD","GBP","AUD","EUR","CHF","NOK","SEK","DKK","NZD","SGD","MXN","HKD","CZK","ILS","MYR","RUB","PHP","PLN","THB","BRL","ARS","COP","IDR","INR","JPY","ZAR"],"defaultCurrency":"USD","selectedCurrency":"USD","measurementStandard":1,"showCustomCheckoutForm":false,"checkoutPageMarketingOptInEnabled":false,"enableMailingListOptInByDefault":false,"sameAsRetailLocation":false,"merchandisingSettings":{"scarcityEnabledOnProductItems":false,"scarcityEnabledOnProductBlocks":false,"scarcityMessageType":"DEFAULT_SCARCITY_MESSAGE","scarcityThreshold":10,"multipleQuantityAllowedForServices":true,"restockNotificationsEnabled":false,"restockNotificationsSuccessText":"","restockNotificationsMailingListSignUpEnabled":false,"relatedProductsEnabled":false,"relatedProductsOrdering":"random","soldOutVariantsDropdownDisabled":false,"productComposerOptedIn":false,"productComposerABTestOptedOut":false,"productReviewsEnabled":false,"displayImportedProductReviewsEnabled":false,"hasOptedToCollectNativeReviews":false},"isLive":false,"multipleQuantityAllowedForServices":true},"useEscapeKeyToLogin":false,"ssBadgeType":1,"ssBadgePosition":4,"ssBadgeVisibility":1,"ssBadgeDevices":1,"pinterestOverlayOptions":{"mode":"disabled"},"ampEnabled":false,"userAccountsSettings":{"loginAllowed":false,"signupAllowed":false}},"cookieSettings":{"isCookieBannerEnabled":false,"isRestrictiveCookiePolicyEnabled":false,"isRestrictiveCookiePolicyAbsolute":false,"cookieBannerText":"","cookieBannerTheme":"","cookieBannerVariant":"","cookieBannerPosition":"","cookieBannerCtaVariant":"","cookieBannerCtaText":"","cookieBannerAcceptType":"OPT_IN","cookieBannerOptOutCtaText":"","cookieBannerHasOptOut":false,"cookieBannerHasManageCookies":true,"cookieBannerManageCookiesLabel":""},"websiteCloneable":false,"collection":{"title":"Blog","id":"5fa594821cf2d45763f96a60","fullUrl":"/","type":1,"permissionType":1},"item":{"title":"The Circuits Handbook","id":"608b39db788be46702bc21a9","fullUrl":"/posts/2021/5/03/the-circuits-handbook","publicCommentCount":9,"commentState":1,"recordType":1},"subscribed":false,"appDomain":"squarespace.com","templateTweakable":true,"tweakJSON":{"aspect-ratio":"Auto","banner-slideshow-controls":"Arrows","gallery-arrow-style":"No Background","gallery-aspect-ratio":"3:2 Standard","gallery-auto-crop":"true","gallery-autoplay":"false","gallery-design":"Grid","gallery-info-overlay":"Show on Hover","gallery-loop":"false","gallery-navigation":"Bullets","gallery-show-arrows":"true","gallery-transitions":"Fade","galleryArrowBackground":"rgba(34,34,34,1)","galleryArrowColor":"rgba(255,255,255,1)","galleryAutoplaySpeed":"3","galleryCircleColor":"rgba(255,255,255,1)","galleryInfoBackground":"rgba(0, 0, 0, .7)","galleryThumbnailSize":"100px","gridSize":"280px","gridSpacing":"10px","logoContainerWidth":"150px","product-gallery-auto-crop":"false","product-image-auto-crop":"true","siteTitleContainerWidth":"220px","tweak-v1-related-products-title-spacing":"50px"},"templateId":"52a74dafe4b073a80cd253c5","templateVersion":"7","pageFeatures":[1,2,4],"gmRenderKey":"QUl6YVN5Q0JUUk9xNkx1dkZfSUUxcjQ2LVQ0QWVUU1YtMGQ3bXk4","templateScriptsRootUrl":"https://static1.squarespace.com/static/ta/52a74d9ae4b0253945d2aee9/1052/scripts/","betaFeatureFlags":["crm_redesign_phase_1","customer_account_creation_recaptcha","background_art_onboarding","accounting_orders_sync","commerce_order_status_access","hideable_header_footer_for_memberareas","campaigns_import_discounts","visitor_react_forms","campaigns_discount_section_in_automations","donations_panel_refactor","campaigns_global_uc_ab","commerce_checkout_website_updates_enabled","fluid_engine","send_local_pickup_ready_email","commerce_currency_jpy","hideable_header_footer","campaigns_new_image_layout_picker","commerce_subscription_renewal_notifications","fluid_engine_clean_up_grid_contextual_change","commerce_site_visitor_metrics","commerce_clearpay","hideable_header_footer_for_videos","i18n_beta_website_locales","is_feature_gate_refresh_enabled","scripts_defer","crm_product_contacts_use_mfe","commsplat_forms_visitor_profile","viewer-role-contributor-invites","google_consent_v2","proposals_beta_in_circle_labs","commerce_etsy_product_import","campaigns_thumbnail_layout","commerce_restock_notifications","nested_categories_migration_enabled","pdp_product_add_ons_visitor_site","hide_header_footer_beta","marketing_landing_page","unify_edit_mode_p2","customer_accounts_email_verification","commerce_paywall_renewal_notifications","enable_css_variable_tweaks","website_fonts","order_status_page_checkout_landing_enabled","toggle_preview_new_shortcut","commerce_etsy_shipping_import","campaigns_discount_section_in_blasts","hideable_header_footer_for_courses"],"videoAssetsFeatureFlags":["mux-data-video-collection","mux-data-course-collection"],"impersonatedSession":false,"tzData":{"zones":[[-480,"US","P%sT",null]],"rules":{"US":[[1967,2006,null,"Oct","lastSun","2:00","0","S"],[1987,2006,null,"Apr","Sun>=1","2:00","1:00","D"],[2007,"max",null,"Mar","Sun>=8","2:00","1:00","D"],[2007,"max",null,"Nov","Sun>=1","2:00","0","S"]]}},"showAnnouncementBar":false,"recaptchaEnterpriseContext":{"recaptchaEnterpriseSiteKey":"6LdDFQwjAAAAAPigEvvPgEVbb7QBm-TkVJdDTlAv"},"i18nContext":{"timeZoneData":{"id":"America/Los_Angeles","name":"Pacific Time"}},"env":"PRODUCTION"};</script><script>SquarespaceFonts.loadViaContext(); Squarespace.load(window);</script>
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://blog.recroom.com/posts?format=rss" />
+<script type="application/ld+json">{"url":"https://blog.recroom.com","name":"Rec Room Developer Blog","description":"","image":"//images.squarespace-cdn.com/content/v1/582e7271bebafbd72792bd97/1571873579729-YGLX8EAT3EP2LIFJ7EZQ/RecRoomLogo_Shadow.png","@context":"http://schema.org","@type":"WebSite"}</script><script type="application/ld+json">{"name":"The Circuits Handbook \u2014 Rec Room Developer Blog","url":"https://blog.recroom.com/posts/2021/5/03/the-circuits-handbook","datePublished":"2021-05-03T20:00:00-0700","dateModified":"2022-06-09T10:57:13-0700","headline":"The Circuits Handbook","author":"Cameron Brown","publisher":{"name":"Rec Room Developer Blog","logo":{"@type":"ImageObject","url":"https://static1.squarespace.com/static/5fa5929d1cf2d45763f942cf/t/5fa5953a1cf2d45763f97bcc/1711654885360/"},"@context":"http://schema.org","@type":"Organization"},"image":"http://static1.squarespace.com/static/5fa5929d1cf2d45763f942cf/t/608b3ae8d8dc240c3fbd0a03/1619737337593/image3.png?format=1500w","@context":"http://schema.org","@type":"Article"}</script><link rel="stylesheet" type="text/css" href="https://static1.squarespace.com/static/sitecss/5fa5929d1cf2d45763f942cf/58/52a74dafe4b073a80cd253c5/5fa5929d1cf2d45763f942dc/1052/site.css"/><script>
+  
+</script><script>Static.COOKIE_BANNER_CAPABLE = true;</script>
+<!-- End of Squarespace Headers -->
+    <script>/* Must be below squarespace-headers */(function(){var e='ontouchstart'in window||navigator.msMaxTouchPoints;var t=document.documentElement;if(!e&&t){t.className=t.className.replace(/touch-styles/,'')}})()
+    </script>
+  </head>
+  <body id="item-608b39db788be46702bc21a9" class="transparent-header enable-nav-button nav-button-style-outline nav-button-corner-style-rounded banner-button-style-raised banner-button-corner-style-rounded banner-slideshow-controls-arrows meta-priority-category center-entry-title--meta  hide-list-entry-footer    hide-blog-sidebar center-navigation--info     event-thumbnails event-thumbnail-size-32-standard event-date-label event-date-label-time event-list-show-cats event-list-date event-list-time event-list-address   event-icalgcal-links  event-excerpts  event-item-back-link    gallery-design-grid aspect-ratio-auto lightbox-style-light gallery-navigation-bullets gallery-info-overlay-show-on-hover gallery-aspect-ratio-32-standard gallery-arrow-style-no-background gallery-transitions-fade gallery-show-arrows gallery-auto-crop   product-list-titles-under product-list-alignment-center product-item-size-11-square product-image-auto-crop product-gallery-size-11-square  show-product-price show-product-item-nav product-social-sharing tweak-v1-related-products-image-aspect-ratio-11-square tweak-v1-related-products-details-alignment-center newsletter-style-dark  opentable-style-light small-button-style-solid small-button-shape-square medium-button-style-outline medium-button-shape-square large-button-style-outline large-button-shape-square image-block-poster-text-alignment-center image-block-card-dynamic-font-sizing image-block-card-content-position-center image-block-card-text-alignment-left image-block-overlap-dynamic-font-sizing image-block-overlap-content-position-center image-block-overlap-text-alignment-left image-block-collage-dynamic-font-sizing image-block-collage-content-position-top image-block-collage-text-alignment-left image-block-stack-dynamic-font-sizing image-block-stack-text-alignment-left button-style-solid button-corner-style-square tweak-product-quick-view-button-style-floating tweak-product-quick-view-button-position-bottom tweak-product-quick-view-lightbox-excerpt-display-truncate tweak-product-quick-view-lightbox-show-arrows tweak-product-quick-view-lightbox-show-close-button tweak-product-quick-view-lightbox-controls-weight-light native-currency-code-usd view-item collection-type-blog collection-layout-default collection-5fa594821cf2d45763f96a60 mobile-style-available">
+    <div class="body-overlay"></div>
+    <div class="sqs-announcement-bar-dropzone"></div>
+    <div id="sidecarNav">
+      
+
+  <div id="mobileNavWrapper" class="nav-wrapper" data-content-field="navigation-mobileNav">
+    <nav id="mobileNavigation">
+      
+
+      
+        
+          
+          <div class="external">
+            <a href="/posts/category/Social / Events">
+              Social / Events
+            </a>
+          </div>
+          
+
+        
+
+      
+        
+          
+          <div class="external">
+            <a href="/posts/category/Newsletters">
+              Newsletters
+            </a>
+          </div>
+          
+
+        
+
+      
+        
+          
+          <div class="external">
+            <a href="https://recroom.com/">
+              RecRoom.com
+            </a>
+          </div>
+          
+
+        
+
+      
+    </nav>
+  </div>
+
+
+
+    </div>
+    <div id="siteWrapper" class="clearfix">
+
+      <div class="sqs-cart-dropzone"></div>
+
+      <header id="header" class="show-on-scroll" data-offset-el=".index-section" data-offset-behavior="bottom" role="banner">
+        <div class="header-inner">
+          <div id="logoWrapper" class="wrapper" data-content-field="site-title">
+            
+              <h1 id="logoImage"><a href="/"><img src="//images.squarespace-cdn.com/content/v1/582e7271bebafbd72792bd97/1571873579729-YGLX8EAT3EP2LIFJ7EZQ/RecRoomLogo_Shadow.png?format=1500w" alt="Rec Room Developer Blog" /></a></h1>
+            
+          </div><!--
+          --><div class="mobile-nav-toggle"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></div><div class="mobile-nav-toggle fixed-nav-toggle"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></div><!--
+          --><div id="headerNav">
+
+  <div id="mainNavWrapper" class="nav-wrapper" data-content-field="navigation-mainNav">
+    <nav id="mainNavigation" data-content-field="navigation-mainNav">
+      
+
+      
+        
+          
+          <div class="external">
+            <a href="/posts/category/Social / Events">
+              Social / Events
+            </a>
+          </div>
+          
+
+        
+
+      
+        
+          
+          <div class="external">
+            <a href="/posts/category/Newsletters">
+              Newsletters
+            </a>
+          </div>
+          
+
+        
+
+      
+        
+          
+          <div class="external">
+            <a href="https://recroom.com/">
+              RecRoom.com
+            </a>
+          </div>
+          
+
+        
+
+      
+    </nav>
+  </div>
+  <!-- style below blocks out the mobile nav toggle only when nav is loaded -->
+  <style>.mobile-nav-toggle-label { display: inline-block !important; }</style>
+
+
+</div>
+        </div>
+      </header>
+
+      
+        
+          
+            
+              
+            
+          
+        
+      
+
+
+      
+      
+      
+
+      <main id="page" role="main">
+        
+        <!--
+        --><!--
+        --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="5fa594821cf2d45763f96a60" data-edit-main-image="">
+         <div class="blog-item">
+
+  
+  <article class="entry h-entry hentry category-dev-blogs author-cameron-brown post-type-text clear" id="article-608b39db788be46702bc21a9" data-item-id="608b39db788be46702bc21a9">
+
+    <header class="entry-header">
+      <div class="meta-above-title">
+        
+        <div class="entry-byline">
+          <span class="entry-author"><a href="/?author=5fa5c7c999dc1146607a911e" class="p-author author entry-byline-link" rel="author">Cameron Brown</a></span>
+        </div>
+        
+        <div class="entry-dateline">
+          <time class="dt-published published entry-date" datetime="2021-05-03" pubdate><a href="/posts/2021/5/03/the-circuits-handbook" class="entry-dateline-link">May 3, 2021</a></time>
+          <time class="dt-updated updated" datetime="2022-06-09"></time>
+        </div>
+        
+        <div class="entry-morefrom">
+          <span class="entry-category"><a href="/posts/category/Dev+Blogs" class="entry-morefrom-link" rel="tag">Dev Blogs</a></span>
+        </div>
+        
+      </div>
+      <h1 data-content-field="title" class="entry-title p-name">
+      
+        <a href="/posts/2021/5/03/the-circuits-handbook" class="u-url" rel="bookmark">The Circuits Handbook</a>
+      
+      </h1>
+      <div class="meta-below-title ">
+        
+        <div class="entry-byline">
+          <span class="entry-author"><a href="/?author=5fa5c7c999dc1146607a911e" class="p-author author entry-byline-link" rel="author">Cameron Brown</a></span>
+        </div>
+        
+        <div class="entry-dateline">
+          <time class="dt-published published entry-date" datetime="2021-05-03" pubdate><a href="/posts/2021/5/03/the-circuits-handbook" class="entry-dateline-link">May 3, 2021</a></time>
+          <time class="dt-updated updated" datetime="2022-06-09"></time>
+        </div>
+        
+        <div class="entry-morefrom">
+          <span class="entry-category"><a href="/posts/category/Dev+Blogs" class="entry-morefrom-link" rel="tag">Dev Blogs</a></span>
+        </div>
+        
+      </div>
+    </header>
+
+    <div class="entry-content e-content">
+      
+        <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1619737663637" id="item-608b39db788be46702bc21a9"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-04bb0055c69153fc5642"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <p class="" style="white-space:pre-wrap;">This document is a broad overview of the Circuits system - covering all the important concepts and entities you need to know about!</p><h1 style="white-space:pre-wrap;">What are Circuits?</h1><p class="" style="white-space:pre-wrap;">Circuits is Rec Room’s visual scripting system. It’s the way to add behavior and interactivity to your Rec Room creations</p><p class="" style="white-space:pre-wrap;">If you want to build:</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">Game rules with timers and scoring</p></li><li><p class="" style="white-space:pre-wrap;">A vehicle that you can drive around</p></li><li><p class="" style="white-space:pre-wrap;">A drum machine</p></li></ul><p class="" style="white-space:pre-wrap;">...you’ll use Circuits to make it work!</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1619737034813_31430"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:1270px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:52.75590515136719%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737322232-SC8UVY2V3EK3Z3BGQFC9/image3.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737322232-SC8UVY2V3EK3Z3BGQFC9/image3.png" data-image-dimensions="1270x670" data-image-focal-point="0.5,0.5" alt="image3.png" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737322232-SC8UVY2V3EK3Z3BGQFC9/image3.png" width="1270" height="670" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737322232-SC8UVY2V3EK3Z3BGQFC9/image3.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737322232-SC8UVY2V3EK3Z3BGQFC9/image3.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737322232-SC8UVY2V3EK3Z3BGQFC9/image3.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737322232-SC8UVY2V3EK3Z3BGQFC9/image3.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737322232-SC8UVY2V3EK3Z3BGQFC9/image3.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737322232-SC8UVY2V3EK3Z3BGQFC9/image3.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737322232-SC8UVY2V3EK3Z3BGQFC9/image3.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1619737034813_31755"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <h1 style="white-space:pre-wrap;">How do I use Circuits?</h1><p class="" style="white-space:pre-wrap;">As with most creation tasks in Rec Room, you’ll use the Maker Pen to create and edit Circuits.</p><p class="" style="white-space:pre-wrap;">All the bits and pieces you need to make a circuit are in the Maker Pen Palette, and you spawn them in your room the same way you spawn a shape or a prop. All the basic tools work as normal: Move, Rotate, Scale, Clone, Delete, Undo, etc.</p><p class="" style="white-space:pre-wrap;">When building with circuits, you’ll also make heavy use of:</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">The Wire tool - use this to add wires that connect things together and make things happen.</p></li><li><p class="" style="white-space:pre-wrap;">The Edit tool - use this to “open up” circuit boards so you can see what’s hidden inside (more on this soon).</p></li><li><p class="" style="white-space:pre-wrap;">The Config tool - use this to show the Config menu, where you can adjust how your circuit objects work.</p></li></ul><h1 style="white-space:pre-wrap;">Hello World!</h1><p class="" style="white-space:pre-wrap;">If you’re anything like me, you will be keen to just try it out as opposed to reading this whole document. So let’s walk through a very simple example, so you can see circuits in action and get a feel for how it works:</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="sqs-block video-block sqs-block-video" data-block-json="&#123;&quot;blockAnimation&quot;:&quot;none&quot;,&quot;layout&quot;:&quot;caption-hidden&quot;,&quot;overlay&quot;:false,&quot;description&quot;:&#123;&#125;,&quot;hSize&quot;:null,&quot;floatDir&quot;:null,&quot;isOldBlock&quot;:true,&quot;html&quot;:&quot;&lt;iframe class=\&quot;embedly-embed\&quot; src=\&quot;//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2Fe94CA3ZSFyY&amp;display_name=YouTube&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3De94CA3ZSFyY&amp;image=http%3A%2F%2Fi.ytimg.com%2Fvi%2Fe94CA3ZSFyY%2Fhqdefault.jpg&amp;key=61d05c9d54e8455ea7a9677c366be814&amp;type=text%2Fhtml&amp;schema=youtube\&quot; width=\&quot;854\&quot; height=\&quot;480\&quot; scrolling=\&quot;no\&quot; title=\&quot;YouTube embed\&quot; frameborder=\&quot;0\&quot; allow=\&quot;autoplay; fullscreen\&quot; allowfullscreen=\&quot;true\&quot;&gt;&lt;/iframe&gt;&quot;,&quot;url&quot;:&quot;https://www.youtube.com/watch?v=e94CA3ZSFyY&quot;,&quot;width&quot;:854,&quot;height&quot;:480,&quot;providerName&quot;:&quot;YouTube&quot;,&quot;thumbnailUrl&quot;:&quot;http://i.ytimg.com/vi/e94CA3ZSFyY/hqdefault.jpg&quot;,&quot;resolvedBy&quot;:&quot;youtube&quot;&#125;" data-block-type="32" id="block-yui_3_17_2_1_1619737034813_28578"><div class="sqs-block-content"><div class="intrinsic" style="max-width:100%"><div class="embed-block-wrapper " style="padding-bottom:56.20609%;"><div class="sqs-video-wrapper" data-provider-name="YouTube" data-html="<br/><br/><br/><br/><br/><br/>  <br/>  &lt;iframe src=&quot;//www.youtube.com/embed/e94CA3ZSFyY?wmode=opaque&quot; height=&quot;480&quot; width=&quot;854&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;<br/><br/>"></div></div></div></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1619737034813_28764"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <h1 style="white-space:pre-wrap;">System Tour</h1><p class="" style="white-space:pre-wrap;">Let’s take a tour of the entire Circuits system. Once you’ve read this entire section, you’ll be familiar with every part of the system. But please understand that it will take some time and practice to truly master it! Programming in Circuits has a lot in common with programming in any language.&nbsp;</p><p class="" style="white-space:pre-wrap;">So the bad news is: It can be complicated, and there’s a lot to practice and learn. You’ll probably feel overwhelmed sometimes.</p><p class="" style="white-space:pre-wrap;">The good news is it’s incredibly powerful, and once you’ve mastered it you’ll know quite a lot about actual programming! Plus, there’s an amazing community of creators ready to help you.</p><p class="" style="white-space:pre-wrap;">OK, let’s get started.</p><h2 style="white-space:pre-wrap;">Room Layer vs Circuit Layer</h2><p class="" style="white-space:pre-wrap;">The first thing to know is that a Rec Room room has two “layers”:</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>The Room Layer </strong>- this is the basic room. Generally speaking, everything you can see when you’re not holding a Maker Pen is in the room layer. Objects (like basketballs, chairs, etc.) and other players live in the room layer.</p></li><li><p class="" style="white-space:pre-wrap;"><strong>The Circuit Layer</strong> - this is the hidden “creation realm” in Rec Room. It reveals itself when you equip your Maker Pen. Circuit Objects (like chips, boards, components, and the wires that connect them) live in the circuit layer.</p></li></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="row sqs-row"><div class="col sqs-col-6 span-6"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1619737034813_36123"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:647px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:130.602783203125%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737358451-QPYTH6EQSZX324UHLAP7/image5.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737358451-QPYTH6EQSZX324UHLAP7/image5.png" data-image-dimensions="647x845" data-image-focal-point="0.5,0.5" alt="Room layer" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737358451-QPYTH6EQSZX324UHLAP7/image5.png" width="647" height="845" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 50vw, 50vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737358451-QPYTH6EQSZX324UHLAP7/image5.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737358451-QPYTH6EQSZX324UHLAP7/image5.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737358451-QPYTH6EQSZX324UHLAP7/image5.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737358451-QPYTH6EQSZX324UHLAP7/image5.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737358451-QPYTH6EQSZX324UHLAP7/image5.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737358451-QPYTH6EQSZX324UHLAP7/image5.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737358451-QPYTH6EQSZX324UHLAP7/image5.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+          
+          <figcaption class="image-caption-wrapper">
+            <div class="image-caption"><p class="" style="white-space:pre-wrap;">Room layer</p></div>
+          </figcaption>
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div></div><div class="col sqs-col-6 span-6"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1619737034813_42617"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:547px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:152.1023712158203%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737393000-7W4NCHZHB65P1O00HPE3/image12.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737393000-7W4NCHZHB65P1O00HPE3/image12.png" data-image-dimensions="547x832" data-image-focal-point="0.5,0.5" alt="Circuit layer (notice the visible chips and wires)" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737393000-7W4NCHZHB65P1O00HPE3/image12.png" width="547" height="832" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 50vw, 50vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737393000-7W4NCHZHB65P1O00HPE3/image12.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737393000-7W4NCHZHB65P1O00HPE3/image12.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737393000-7W4NCHZHB65P1O00HPE3/image12.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737393000-7W4NCHZHB65P1O00HPE3/image12.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737393000-7W4NCHZHB65P1O00HPE3/image12.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737393000-7W4NCHZHB65P1O00HPE3/image12.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737393000-7W4NCHZHB65P1O00HPE3/image12.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+          
+          <figcaption class="image-caption-wrapper">
+            <div class="image-caption"><p class="" style="white-space:pre-wrap;">Circuit layer (notice the visible chips and wires)</p></div>
+          </figcaption>
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1619737034813_36536"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <p class="" style="white-space:pre-wrap;">You can think of the circuit layer as the engine in a car. Usually you can’t see it - you just see a cool-looking car driving around. But pop the hood and you’ll see the complex machinery that makes it work.</p><p class="" style="white-space:pre-wrap;">Equipping the Maker Pen is like popping the hood on your room - things definitely look more complex, but it’s where you can make serious changes to how things work!</p><h2 style="white-space:pre-wrap;">Syncing, Execution and Heat</h2><p class="" style="white-space:pre-wrap;">If you’re just getting started with circuits, you can just wire objects together and it will mostly work like you expect.</p><p class="" style="white-space:pre-wrap;">But as your creations get more complex, you’ll need a deeper understanding of how things work “under the hood” so that you can be sure that your circuits (a) work correctly under all conditions, and (b) are working efficiently so that you don’t run into performance problems.</p><p class="" style="white-space:pre-wrap;">Let’s start by introducing three important concepts:</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>Syncing </strong>- at a basic level Rec Room simulates the experience of being with other people in a room filled with real objects. Player A might be in Seattle, while Player B is in Tokyo. To create the illusion that they are in the same room, we need to <em>sync</em> the room state back and forth, so that changes made by Player A are seen by Player B, and vice versa. Syncing is achieved by sending messages over the internet. Rec Room sends hundreds of “sync” messages per second back and forth between players to keep everything in sync. You can learn more about the basics of Rec Room networking by Reading <a href="https://docs.google.com/document/d/1VZDtxATXWQQKqX6Hoj63TPC_kM-DXnkn8_vVvVsMnt0/edit?usp=sharing"><span style="text-decoration:underline">Rec Room Networking 101</span></a>.</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Execution </strong>- you can think of execution as “sending electricity down the wires” to activate circuit objects. You can also call this “running” a circuit. “Running” a circuit and “executing” a circuit mean the same thing, and we use the two terms interchangeably. We’ll dig deeper into this later, but as a starting point:</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">Like any computer code, circuit execution happens on an actual CPU on an actual device. Maybe this circuit is executing on my iPhone, or your PC, or Stephanie’s Oculus Quest. The key point is that it’s running on someone’s actual, physical device.</p></li><li><p class="" style="white-space:pre-wrap;">The best way to think about it is that circuit execution is hosted by a specific player. If I say “I’m running this circuit”, what I mean is “this circuit is executing on my device”. If I say “Player X is running this circuit”, it means “this circuit is running on Player X’s device”.</p></li></ul></li><li><p class="" style="white-space:pre-wrap;"><strong>Heat </strong>- both syncing and execution use actual, physical resources in the real world. Neither network bandwidth (syncing) nor CPU cycles (execution) are infinite! “Heat” is how these limited resources are represented in the Circuits System.</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>Sync heat</strong> - is how much network traffic your circuits are sending. Less is better. Max out the sync heat gauge, and your circuits will stop executing (since sending any more traffic will cause you to disconnect from Rec Room).</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Exec heat</strong> - is how much CPU time your circuits are consuming. Less is better. Max out the exec heat gauge, and your circuits will stop executing (since taking up more CPU time would badly impact the frame rate of the game).</p></li></ul></li></ul><p class="" style="white-space:pre-wrap;">The various limits are shown as gauges in the Circuits V2 sections of the palette:</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1619737034813_52684"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:966px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:7.556936264038086%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737463921-V0C3602UYC7PDOWITUEI/image6.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737463921-V0C3602UYC7PDOWITUEI/image6.png" data-image-dimensions="966x73" data-image-focal-point="0.5,0.5" alt="image6.png" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737463921-V0C3602UYC7PDOWITUEI/image6.png" width="966" height="73" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737463921-V0C3602UYC7PDOWITUEI/image6.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737463921-V0C3602UYC7PDOWITUEI/image6.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737463921-V0C3602UYC7PDOWITUEI/image6.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737463921-V0C3602UYC7PDOWITUEI/image6.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737463921-V0C3602UYC7PDOWITUEI/image6.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737463921-V0C3602UYC7PDOWITUEI/image6.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737463921-V0C3602UYC7PDOWITUEI/image6.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1619737034813_53083"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">CPU = Exec heat. Stay under 100%.</p></li><li><p class="" style="white-space:pre-wrap;">Net = Sync heat. Note that there are two values shown:</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">% = how much sync traffic your circuits are generating (stay under 100%)</p></li><li><p class="" style="white-space:pre-wrap;">Sync event limit = some components (see below) generate “sync events” to tell other players that something has happened. You are currently limited to five sync events per frame.</p></li></ul></li><li><p class="" style="white-space:pre-wrap;">Chips = How many chips you can have in your room total (currently 3,000). Once you reach the limit you won’t be able to create (spawn, clone, copy, etc.) any more chips.</p></li></ul><p class="" style="white-space:pre-wrap;">Note: These limits are intentionally quite conservative as we roll the system out and understand its behavior “in the wild”. We will be working to increase these limits significantly over time.</p><h2 style="white-space:pre-wrap;">Circuit Objects</h2><p class="" style="white-space:pre-wrap;">There are four types of circuit objects that you need to know about. Each type of object performs a different role in the system, and has different rules for how they work. The four types are:</p><ol data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">Rec Room objects</p></li><li><p class="" style="white-space:pre-wrap;">Chips</p></li><li><p class="" style="white-space:pre-wrap;">Boards</p></li><li><p class="" style="white-space:pre-wrap;">Components</p></li></ol><p class="" style="white-space:pre-wrap;">Let’s look at each in more detail...</p><h3 style="white-space:pre-wrap;">Rec Room objects</h3><p class="" style="white-space:pre-wrap;">Most things you see in a room are Rec Room objects (there are some exceptions, but not many). For example, a basketball is a Rec Room object.&nbsp;</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">Live in the room layer - i.e., always visible</p></li><li><p class="" style="white-space:pre-wrap;">Automatically synced - i.e., all players in the room will see the basketball in the same place at the same time</p></li><li><p class="" style="white-space:pre-wrap;">Cost ink</p></li></ul><p class="" style="white-space:pre-wrap;">Some RR objects (e.g., a button) can generate events in the circuit layer. We call these “input objects”.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1619737034813_56120"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:249px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:193.5742950439453%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737495553-7Y6SS29TMUTTTSDZWNIA/image2.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737495553-7Y6SS29TMUTTTSDZWNIA/image2.png" data-image-dimensions="249x482" data-image-focal-point="0.5,0.5" alt="image2.png" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737495553-7Y6SS29TMUTTTSDZWNIA/image2.png" width="249" height="482" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737495553-7Y6SS29TMUTTTSDZWNIA/image2.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737495553-7Y6SS29TMUTTTSDZWNIA/image2.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737495553-7Y6SS29TMUTTTSDZWNIA/image2.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737495553-7Y6SS29TMUTTTSDZWNIA/image2.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737495553-7Y6SS29TMUTTTSDZWNIA/image2.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737495553-7Y6SS29TMUTTTSDZWNIA/image2.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737495553-7Y6SS29TMUTTTSDZWNIA/image2.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1619737034813_56515"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <h3 style="white-space:pre-wrap;">Chips</h3><p class="" style="white-space:pre-wrap;">Chips are the basic building block of circuits. Most chips are pretty simple - for example the Add chip which takes two numbers and outputs their sum. Or a Variable chip which can store a number or string for later use. But some chips are quite complex (we’ll talk about those later).</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">Live in the circuit layer - i.e., only visible when holding a Maker Pen</p></li><li><p class="" style="white-space:pre-wrap;">Physical state is synced - the presence/absence of a chip (and location in the room) is synced.</p></li><li><p class="" style="white-space:pre-wrap;">Execution state is <em>not</em> synced - a chip could be executing for player A, but not for player B.</p></li><li><p class="" style="white-space:pre-wrap;">No ink cost</p></li></ul><p class="" style="white-space:pre-wrap;">Chips have input and output <strong>ports </strong>which are connected with <strong>wires</strong>, creating a <strong>circuit graph</strong>. To do anything cool with circuits, you’ll need to learn how to build and work with circuit graphs!</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1619737034813_59590"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:530px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:74.3396224975586%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737518821-HK8NG2AZH9PGUN4TDOST/image10.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737518821-HK8NG2AZH9PGUN4TDOST/image10.png" data-image-dimensions="530x394" data-image-focal-point="0.5,0.5" alt="image10.png" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737518821-HK8NG2AZH9PGUN4TDOST/image10.png" width="530" height="394" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737518821-HK8NG2AZH9PGUN4TDOST/image10.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737518821-HK8NG2AZH9PGUN4TDOST/image10.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737518821-HK8NG2AZH9PGUN4TDOST/image10.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737518821-HK8NG2AZH9PGUN4TDOST/image10.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737518821-HK8NG2AZH9PGUN4TDOST/image10.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737518821-HK8NG2AZH9PGUN4TDOST/image10.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737518821-HK8NG2AZH9PGUN4TDOST/image10.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1619737034813_59973"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <p class="" style="white-space:pre-wrap;">Chips generally don’t do anything until they are <strong>executed</strong>. When executed, they do their thing (e.g., add two numbers) and produce some kind of result. Chips can be executed in two ways:</p><ol data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>Input exec port</strong> - this the “standard” way to execute a chip. Connect a wire to the orange exec input. When an exec signal arrives at the port via the wire, the chip will execute. Results are sent to the output data ports (if any), and exec continues at an output exec port.</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Auto-exec on read</strong> - some chips don’t have (or need) an input exec port. These chips auto-execute when something reads their output data ports. For example, the Add chip doesn’t have an input exec port, it auto-execs when something reads its “value” output.</p></li></ol><p class="" style="white-space:pre-wrap;">Here’s an example of a circuit graph executing - the flashing wires indicate the different execution path based on the input:</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1619737034813_63099"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:1800px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:74.94444274902344%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737560306-0SCAVXZY4EX5M3OYNE3C/image4.gif" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737560306-0SCAVXZY4EX5M3OYNE3C/image4.gif" data-image-dimensions="1800x1349" data-image-focal-point="0.5,0.5" alt="image4.gif" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737560306-0SCAVXZY4EX5M3OYNE3C/image4.gif" width="1800" height="1349" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737560306-0SCAVXZY4EX5M3OYNE3C/image4.gif?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737560306-0SCAVXZY4EX5M3OYNE3C/image4.gif?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737560306-0SCAVXZY4EX5M3OYNE3C/image4.gif?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737560306-0SCAVXZY4EX5M3OYNE3C/image4.gif?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737560306-0SCAVXZY4EX5M3OYNE3C/image4.gif?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737560306-0SCAVXZY4EX5M3OYNE3C/image4.gif?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737560306-0SCAVXZY4EX5M3OYNE3C/image4.gif?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1619737034813_63480"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <h3 style="white-space:pre-wrap;">Boards</h3><p class="" style="white-space:pre-wrap;">Boards are basically containers for chips. You can edit into a board to create a complex circuit graph, then edit back out to hide the complexity.</p><p class="" style="white-space:pre-wrap;">Like chips, boards have input and output ports that allow you to connect wires. Ports are visible on both the inside and the outside of a board. This means you can connect a wire to the outside of a board, and receive that signal inside the board. This is one of the ways circuit graphs inside a board communicate with the outside world.</p><p class="" style="white-space:pre-wrap;">Ports are grouped into named <strong>functions</strong>, which can be executed by wiring to the board. In the future, you’ll be able to call these functions remotely by using the Function chip, but that is not available yet!</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">Live in the circuit layer - i.e., only visible when holding a Maker Pen</p></li><li><p class="" style="white-space:pre-wrap;">Physical state is synced - the presence/absence of a board (and location in the room) is synced.</p></li><li><p class="" style="white-space:pre-wrap;">Execution state is <em>not</em> synced - a board could be executing for player A, but not for player B.</p></li><li><p class="" style="white-space:pre-wrap;">No ink cost</p></li></ul><p class="" style="white-space:pre-wrap;">Note that only chips and boards can be placed in boards. You can’t put a RR object or a component in a board.</p><p class="" style="white-space:pre-wrap;">There are a few different types of board. They are all fundamentally similar (“containers for chips”), but there are important details:</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>Object boards </strong>- every RR object has an “object board” (note: This is not true yet… but we’re working on it!). This is a circuit board that is permanently connected to the object. Object boards allow you to send circuit signals to/from any RR object.</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Player boards </strong>- every player in the room has a “player board”. This is a circuit board that is permanently connected to a player. Player boards allow you to send circuit signals to/from any player. Note that you can’t wire directly to a player board, since players can join/leave rooms at any moment. More on that later…</p></li></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="row sqs-row"><div class="col sqs-col-6 span-6"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1619737034813_66765"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:216px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:112.5%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737597234-2U90T9F81A6Z1WMUYWIF/image1.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737597234-2U90T9F81A6Z1WMUYWIF/image1.png" data-image-dimensions="216x243" data-image-focal-point="0.5,0.5" alt="Button object with board visible above it" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737597234-2U90T9F81A6Z1WMUYWIF/image1.png" width="216" height="243" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 50vw, 50vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737597234-2U90T9F81A6Z1WMUYWIF/image1.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737597234-2U90T9F81A6Z1WMUYWIF/image1.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737597234-2U90T9F81A6Z1WMUYWIF/image1.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737597234-2U90T9F81A6Z1WMUYWIF/image1.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737597234-2U90T9F81A6Z1WMUYWIF/image1.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737597234-2U90T9F81A6Z1WMUYWIF/image1.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737597234-2U90T9F81A6Z1WMUYWIF/image1.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+          
+          <figcaption class="image-caption-wrapper">
+            <div class="image-caption"><p class="" style="white-space:pre-wrap;">Button object with board visible above it</p></div>
+          </figcaption>
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div></div><div class="col sqs-col-6 span-6"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1619737034813_72356"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:1200px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:44.83333206176758%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737615094-FXRJNY70FWZC6UOF24UG/image9.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737615094-FXRJNY70FWZC6UOF24UG/image9.png" data-image-dimensions="1200x538" data-image-focal-point="0.5,0.5" alt="The “interior view” of the Button board. Note that the ports on the “Out” bus correspond to the ports on the outside of the Button board." data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737615094-FXRJNY70FWZC6UOF24UG/image9.png" width="1200" height="538" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 50vw, 50vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737615094-FXRJNY70FWZC6UOF24UG/image9.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737615094-FXRJNY70FWZC6UOF24UG/image9.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737615094-FXRJNY70FWZC6UOF24UG/image9.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737615094-FXRJNY70FWZC6UOF24UG/image9.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737615094-FXRJNY70FWZC6UOF24UG/image9.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737615094-FXRJNY70FWZC6UOF24UG/image9.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737615094-FXRJNY70FWZC6UOF24UG/image9.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+          
+          <figcaption class="image-caption-wrapper">
+            <div class="image-caption"><p class="" style="white-space:pre-wrap;">The “interior view” of the Button board. Note that the ports on the “Out” bus correspond to the ports on the outside of the Button board.</p></div>
+          </figcaption>
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1619737034813_67143"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <h3 style="white-space:pre-wrap;">Components</h3><p class="" style="white-space:pre-wrap;">Components are similar to chips, but they have a superpower - they create “<strong>room effects</strong>”. When a component executes in the circuit layer, something happens in the room layer. For example, there are components to play sound effects, create visual effects, display 3D text, or move connected objects (components that move connected objects are called <strong>gizmos</strong>).</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">Live in the circuit layer - i.e., only visible when holding a Maker Pen</p></li><li><p class="" style="white-space:pre-wrap;">Physical state is synced - the presence/absence of a board (and location in the room) is synced.</p></li><li><p class="" style="white-space:pre-wrap;">Execution state is <em>not</em> synced - a component could be executing for player A, but not for player B.</p></li><li><p class="" style="white-space:pre-wrap;">Room effects are synced - e.g., when one player executes a sound effect component, everyone in the room will hear it.</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">Some components allow you to opt-out of syncing room effects.</p></li></ul></li></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1619737034813_112360"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:779px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:64.69833374023438%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737685551-HMRI56NAIITTAVWF34YA/image8.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737685551-HMRI56NAIITTAVWF34YA/image8.png" data-image-dimensions="779x504" data-image-focal-point="0.5,0.5" alt="image8.png" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737685551-HMRI56NAIITTAVWF34YA/image8.png" width="779" height="504" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737685551-HMRI56NAIITTAVWF34YA/image8.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737685551-HMRI56NAIITTAVWF34YA/image8.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737685551-HMRI56NAIITTAVWF34YA/image8.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737685551-HMRI56NAIITTAVWF34YA/image8.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737685551-HMRI56NAIITTAVWF34YA/image8.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737685551-HMRI56NAIITTAVWF34YA/image8.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737685551-HMRI56NAIITTAVWF34YA/image8.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1619737034813_112727"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <h2 style="white-space:pre-wrap;">Execution Model</h2><p class="" style="white-space:pre-wrap;">To really master building with Circuits, you need to fully understand the execution model. It’s pretty simple, but there are important nuances and implications that you need to understand and exploit to get maximum performance out of the system.</p><p class="" style="white-space:pre-wrap;">Let’s start with the basic rules:</p><h3 style="white-space:pre-wrap;">Basic rules</h3><ol data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>Room sync themselves </strong>- everything that happens in the room layer is automatically synced.</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Circuits run per-player</strong> - circuits are executed by a specific player in the room, not by all players.</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Manually sync your circuits</strong> - sometimes it’s important to sync circuit state to other players (for example, you may want everyone to have the same value for a “score” variable). You don’t want to overdo this (for sync heat reasons), but when it’s important you can and should do it manually.</p></li></ol><p class="" style="white-space:pre-wrap;">As a rough rule of thumb, you can interpret these rules as “stuff in the room layer is automatically synced, stuff in the circuit layer is not”.</p><p class="" style="white-space:pre-wrap;">This isn’t 100% true, as there are some important exceptions (a big one being that the physical presence/absence of chips, boards and components in the circuits layer <em>is</em> automatically synced).</p><p class="" style="white-space:pre-wrap;">But it’s a good rough guide to keep in mind as you build!</p><p class="" style="white-space:pre-wrap;">Let’s look at each rule in more detail...</p><h3 style="white-space:pre-wrap;">1. Rooms sync themselves</h3><p class="" style="white-space:pre-wrap;">Rule #1 means that you can expect anything that happens in the room layer to be synced to all players (see <a href="https://docs.google.com/document/d/1VZDtxATXWQQKqX6Hoj63TPC_kM-DXnkn8_vVvVsMnt0/edit?usp=sharing"><span style="text-decoration:underline">Rec Room Networking 101</span></a> for more detail). If I throw a basketball, you see me throw the basketball. There may be minor differences due to network lag (the time it takes to send a sync message from Seattle to Tokyo, for example), but generally speaking all players will agree on the state of the room. As a circuit builder, you don’t have to do anything special to make this happen - rooms sync themselves!</p><h3 style="white-space:pre-wrap;">2. Circuits run per-player</h3><p class="" style="white-space:pre-wrap;">All players have an identical copy of the circuit graphs. If you add or remove a chip, that operation will be synced.</p><p class="" style="white-space:pre-wrap;">Circuit <em>execution</em>, however, is not synced. Execution happens “per-player”. What does this mean exactly?</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>Circuits are <em>always </em>executed by <em>players in the room</em>. </strong>There are no exceptions to this. It could be you, it could be me, it could be that player over there. It could be all of us at the same time! But a circuit graph always runs on <em>someone’s</em> device. There is always an answer to the question “who is running this circuit?”</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Managing who runs what is an important skill</strong> when creating with Circuits. There are some simple rules and patterns to follow that will get you a long way without a deep understanding. But to get maximum quality and performance out of the system, you’ll need to actively manage execution based on a clear understanding of where it's happening and why.</p></li><li><p class="" style="white-space:pre-wrap;">While it’s possible to run circuits on any player, in most cases you’ll use one of two options (we’ll talk about why in a moment):</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">The <strong>Authority Player</strong> - this is a special player chosen by the system (as described in <a href="https://docs.google.com/document/d/1VZDtxATXWQQKqX6Hoj63TPC_kM-DXnkn8_vVvVsMnt0/edit?usp=sharing"><span style="text-decoration:underline">Rec Room Networking 101</span></a> - “Room Authority” and RA are the same thing). There is always one (and only one) RA. If the current RA leaves the room for any reason (they go somewhere else, they disconnect, or they crash), RA duties are immediately and seamlessly transferred to another player. If you were the first player in the room, you are likely RA. If you are the only player in the room, you are <em>definitely</em> RA!</p></li><li><p class="" style="white-space:pre-wrap;">The <strong>Local Player</strong> - this is the player running on a given device. For example, let’s say we have two players in a room:</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">Player A is playing on an iPhone</p></li><li><p class="" style="white-space:pre-wrap;">Player B is playing on a Quest</p></li><li><p class="" style="white-space:pre-wrap;">Player A is the Local Player on the iPhone</p></li><li><p class="" style="white-space:pre-wrap;">Player B is the Local Player on the Quest</p></li></ul></li><li><p class="" style="white-space:pre-wrap;">You can be both Local and<em> </em>RA at the same time! If you’re the only player in a room, you are <em>definitely </em>both.</p></li></ul></li></ul><p class="" style="white-space:pre-wrap;">Let’s go through a simple example to see how this works in practice.</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">Let’s say player A and player B are in the same room.</p></li><li><p class="" style="white-space:pre-wrap;">A moves their avatar over to a button and pushes it.</p></li><li><p class="" style="white-space:pre-wrap;">Player B sees A’s avatar standing next to the button. They see A’s hand reach out and push the button. They see the button depress in, and hear the sound of it “clicking”. All of this stuff happens in the room layer, so it’s automatically synced.</p></li><li><p class="" style="white-space:pre-wrap;">From this point on, the action happens in the circuit layer!</p></li><li><p class="" style="white-space:pre-wrap;">Due to rule #2 (circuits run per-player), things happen differently for A and B. By default, Button objects execute for the local player. This means that...</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">For player A, the “button pressed” output exec port fires on the button’s object board.</p></li><li><p class="" style="white-space:pre-wrap;">For player B, the “button pressed” output exec port does <em>not</em> fire.</p></li></ul></li></ul><p class="" style="white-space:pre-wrap;">To summarize that: <strong>When you press a button, the resulting circuit execution happens for the local player.</strong> It’s possible to change that, but that’s the default behavior.</p><p class="" style="white-space:pre-wrap;">Let’s say the button is connected to a light component. You might wonder how - if the button only executes for the local player - how it is that everyone sees the light turn on/off?</p><p class="" style="white-space:pre-wrap;">That’s because of how components work - while they execute per-player like any circuit object, their room effects are synced. So when any player executes the light to turn it on, the “on” property of the light is automatically synced. This means that - in practice - whoever presses the button, everyone sees the light turn on/off - and the same basic principle applies to VFX, Text, Gizmos, etc.</p><p class="" style="white-space:pre-wrap;">[Pic of button → light component circuit, showing sync events]</p><h3 style="white-space:pre-wrap;">3. Manually sync your circuits</h3><p class="" style="white-space:pre-wrap;">Sometimes, the fact that circuits run per-player causes problems. Consider this simple scoreboard circuit:</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1619737034813_116108"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:978px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:48.0572624206543%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737728545-79DZE0IBVHFBYK0K9JK7/image14.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737728545-79DZE0IBVHFBYK0K9JK7/image14.png" data-image-dimensions="978x470" data-image-focal-point="0.5,0.5" alt="image14.png" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737728545-79DZE0IBVHFBYK0K9JK7/image14.png" width="978" height="470" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737728545-79DZE0IBVHFBYK0K9JK7/image14.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737728545-79DZE0IBVHFBYK0K9JK7/image14.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737728545-79DZE0IBVHFBYK0K9JK7/image14.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737728545-79DZE0IBVHFBYK0K9JK7/image14.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737728545-79DZE0IBVHFBYK0K9JK7/image14.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737728545-79DZE0IBVHFBYK0K9JK7/image14.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737728545-79DZE0IBVHFBYK0K9JK7/image14.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1619737034813_116472"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <p class="" style="white-space:pre-wrap;">If the same player keeps pressing the +1 button over and over, the scoreboard will work as expected. Each press will increment the score (shown in red) by 1.</p><p class="" style="white-space:pre-wrap;">But what happens when <em>another </em>player presses the button? Uh oh… suddenly the score resets to 1. What is going on?</p><p class="" style="white-space:pre-wrap;">The problem is a result of rule #2… because circuits execute per player, each player has their own copy of the “Score” variable. When Player A presses the button, they are incrementing their Score variable. When Player B presses the button, they are incrementing their Score variable. There’s nothing keeping Score in sync for A and B.</p><p class="" style="white-space:pre-wrap;">So this is a case where we need to manually sync our circuits. And it’s easy to do that: We open up the config menu of the Score variable, and turn the “Synced” toggle on:</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="row sqs-row"><div class="col sqs-col-6 span-6"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1619737034813_121510"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:600px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:101.5%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737756993-CXMNH12AQN82CJJF90KF/image13.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737756993-CXMNH12AQN82CJJF90KF/image13.png" data-image-dimensions="600x609" data-image-focal-point="0.5,0.5" alt="Config menu of Score variable - syncing turned off" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737756993-CXMNH12AQN82CJJF90KF/image13.png" width="600" height="609" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 50vw, 50vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737756993-CXMNH12AQN82CJJF90KF/image13.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737756993-CXMNH12AQN82CJJF90KF/image13.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737756993-CXMNH12AQN82CJJF90KF/image13.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737756993-CXMNH12AQN82CJJF90KF/image13.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737756993-CXMNH12AQN82CJJF90KF/image13.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737756993-CXMNH12AQN82CJJF90KF/image13.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737756993-CXMNH12AQN82CJJF90KF/image13.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+          
+          <figcaption class="image-caption-wrapper">
+            <div class="image-caption"><p class="" style="white-space:pre-wrap;">Config menu of Score variable - syncing turned off</p></div>
+          </figcaption>
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div></div><div class="col sqs-col-6 span-6"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1619737034813_129413"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:645px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:91.78294372558594%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737781016-8K1PX1OF2A47A8TBAJND/image15.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737781016-8K1PX1OF2A47A8TBAJND/image15.png" data-image-dimensions="645x592" data-image-focal-point="0.5,0.5" alt="Config menu of Score variable - syncing turned on" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737781016-8K1PX1OF2A47A8TBAJND/image15.png" width="645" height="592" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 50vw, 50vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737781016-8K1PX1OF2A47A8TBAJND/image15.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737781016-8K1PX1OF2A47A8TBAJND/image15.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737781016-8K1PX1OF2A47A8TBAJND/image15.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737781016-8K1PX1OF2A47A8TBAJND/image15.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737781016-8K1PX1OF2A47A8TBAJND/image15.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737781016-8K1PX1OF2A47A8TBAJND/image15.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737781016-8K1PX1OF2A47A8TBAJND/image15.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+          
+          <figcaption class="image-caption-wrapper">
+            <div class="image-caption"><p class="" style="white-space:pre-wrap;">Config menu of Score variable - syncing turned on</p></div>
+          </figcaption>
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1619737034813_121850"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <p class="" style="white-space:pre-wrap;">Now, whenever “Score” is updated, it will automatically sync the change to all players. Now our scoreboard works correctly no matter who presses the button. The downside is that Score now uses some sync heat any time it updates.</p><h3 style="white-space:pre-wrap;">TLDR</h3><p class="" style="white-space:pre-wrap;">To summarize, the three rules are:</p><ol data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>Rooms sync themselves</strong> - “If you can see it when you’re not holding the maker pen, it’s synced!”</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Circuits run per-player </strong>- “Circuit execution happens on one person’s device”</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Manually sync your circuits</strong> - “If it's important that everyone has the same value for a variable, turn on syncing for that variable.”</p></li></ol><p class="" style="white-space:pre-wrap;">You may ask - <em>why </em>do circuits run per-player? Why aren’t they automatically synced like RR objects in the room? Surely that would be simpler? It would. It would also be much more limited. In fact that’s how the original Rec Room circuits worked. Circuits V2 embraces a more complex networking model so that circuit logic can be as fast and reactive (e.g., you fire a gun or hit a drum and it happens <em>reliably </em>and <em>immediately</em>) as the RRO objects we build. It also dramatically reduces network traffic.</p><h2 style="white-space:pre-wrap;">The “GM Pattern”</h2><p class="" style="white-space:pre-wrap;">The GM pattern is a way of constructing circuit graphs that makes them reliable and robust. It’s the right way to implement game rules (e.g., timers, scores, game states, etc.). It’s modeled after the idea of a “Game Master” from D&amp;D - i.e., one person is in charge of keeping track of the rules, scores, etc.!</p><p class="" style="white-space:pre-wrap;">Here’s the basic idea:</p><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">No matter which player starts execution, the important “housekeeping” functions are actually handled by the RA player.</p></li><li><p class="" style="white-space:pre-wrap;">This means that only the RA runs the circuit graphs to update the timer, the score, or whatever needs to happen.</p></li><li><p class="" style="white-space:pre-wrap;">Important variables (e.g., the current timer, or the current score) are synced.</p></li><li><p class="" style="white-space:pre-wrap;">If the current RA leaves, the new RA can pick up where they left off.</p></li></ul><p class="" style="white-space:pre-wrap;">Building things with the GM pattern can be a little more complex, but the benefit is that your game rules are now robust to players joining and leaving the room.</p><p class="" style="white-space:pre-wrap;">Consider this “non-GM Pattern” countdown timer circuit:</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1619737034813_142681"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:1207px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:41.6735725402832%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737880949-DGBWM54C7B20OTMOH2UU/image11.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737880949-DGBWM54C7B20OTMOH2UU/image11.png" data-image-dimensions="1207x503" data-image-focal-point="0.5,0.5" alt="image11.png" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737880949-DGBWM54C7B20OTMOH2UU/image11.png" width="1207" height="503" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737880949-DGBWM54C7B20OTMOH2UU/image11.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737880949-DGBWM54C7B20OTMOH2UU/image11.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737880949-DGBWM54C7B20OTMOH2UU/image11.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737880949-DGBWM54C7B20OTMOH2UU/image11.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737880949-DGBWM54C7B20OTMOH2UU/image11.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737880949-DGBWM54C7B20OTMOH2UU/image11.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737880949-DGBWM54C7B20OTMOH2UU/image11.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1619737034813_143011"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <p class="" style="white-space:pre-wrap;">This circuit will start when a player presses the button, countdown for 10 seconds, then play a buzzer sound when the timer reaches zero.</p><p class="" style="white-space:pre-wrap;">As long as no-one leaves, everything will work fine! But what happens if the player who presses the button leaves the room before the timer reaches zero? (Remember that, by default, buttons execute on the local player).</p><p class="" style="white-space:pre-wrap;">If that happens, the timer will freeze. For everyone left in the room, the timer will appear to break. That’s no good!</p><p class="" style="white-space:pre-wrap;">Here’s the same countdown timer built with the GM pattern:</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1619737034813_149956"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:945px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:48.46561050415039%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737898240-Y3UTGPDOW9CEWWAV4OXA/image7.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737898240-Y3UTGPDOW9CEWWAV4OXA/image7.png" data-image-dimensions="945x458" data-image-focal-point="0.5,0.5" alt="image7.png" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737898240-Y3UTGPDOW9CEWWAV4OXA/image7.png" width="945" height="458" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737898240-Y3UTGPDOW9CEWWAV4OXA/image7.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737898240-Y3UTGPDOW9CEWWAV4OXA/image7.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737898240-Y3UTGPDOW9CEWWAV4OXA/image7.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737898240-Y3UTGPDOW9CEWWAV4OXA/image7.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737898240-Y3UTGPDOW9CEWWAV4OXA/image7.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737898240-Y3UTGPDOW9CEWWAV4OXA/image7.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1619737898240-Y3UTGPDOW9CEWWAV4OXA/image7.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1619737034813_150278"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <p class="" style="white-space:pre-wrap;">In this version of the circuit, the key thing is the “RA 1Hz Tick” chip (actually a board with other chips inside it). This board generates an exec signal once-per-second <em>only for the RA player.</em></p><p class="" style="white-space:pre-wrap;">This means that whoever is the RA player will get the “tick” exec signal. If that RA leaves and another player becomes RA, the new RA will start getting the tick. The key thing is the RA player - and only the RA player - gets the tick!</p><p class="" style="white-space:pre-wrap;">The “tick” exec signal from RA 1Hz Tick is sent straight to an “If” chip, which checks to see if a (synced) variable called “Running” is True. If not, nothing happens! In other words, if the countdown timer isn’t “Running”, the tick is ignored.</p><p class="" style="white-space:pre-wrap;">Now all that needs to happen is the button sets “Running” to True. Now when RA 1Hz Timer ticks, the “If” chip will continue execution, and the countdown happens!</p><p class="" style="white-space:pre-wrap;">This means that if the current RA leaves, the new RA will immediately take over, and the counter will keep counting down as if nothing happened. Perfect!</p><p class="" style="white-space:pre-wrap;">Note that the variables are synced in the GM pattern… this is so that - in the event of a handoff - the new RA can continue on from the right place.</p><p class="" style="white-space:pre-wrap;">You can find the “RA 1Hz Tick” board as an Invention in the Invention store!</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div></div></div></div>
+      
+    </div>
+
+    <footer class="entry-footer clear">
+      
+      
+      <div class="entry-actions">
+        
+  <span class="sqs-simple-like" data-item-id="608b39db788be46702bc21a9" data-like-count="23">
+    <span class="like-icon"></span>
+    <span class="like-count"></span>
+  </span>
+<span class="squarespace-social-buttons inline-style" data-system-data-id="" data-asset-url="https://static1.squarespace.com/static/5fa5929d1cf2d45763f942cf/5fa594821cf2d45763f96a60/608b39db788be46702bc21a9/1654797433393/" data-record-type="1" data-full-url="/posts/2021/5/03/the-circuits-handbook" data-title="The Circuits Handbook"></span>
+      </div>
+    </footer>
+
+    
+
+  </article>
+
+  <div id="comments-608b39db788be46702bc21a9" class="p-comment">
+    
+  <div class="squarespace-comments" id="comments-608b39db788be46702bc21a9" data-item-id="608b39db788be46702bc21a9" data-public-comment-count="9" data-comment-state="1"></div>
+
+  </div>
+
+  
+
+  
+  <nav class="pagination clear">
+    <div class="newer"><span class="prev-label">Newer Post</span><a href="/posts/2021/7/12/community-commerce-report-q2" rel="prev"><span>Community Commerce Report Q2 2021</span></a></div><!-- comment the linebreak between these two elements because science
+  --><div class="older"><span class="next-label">Older Post</span><a href="/posts/2021/4/21/community-commerce-report-q1-2021" rel="next"><span>Community Commerce Report Q1 2021</span></a></div>
+  </nav>
+  
+
+</div>
+        </div><!--
+        --><aside id="rightSidebar" role="complementary">
+          <div class="sqs-layout sqs-grid-12 columns-12 open-block-field empty" data-layout-label="Blog Sidebar Content" data-type="block-field" id="blogBlocks-5fa594821cf2d45763f96a60"><div class="row sqs-row"><div class="col sqs-col-12 span-12"></div></div></div>
+        </aside>
+        
+        
+      </main>
+
+      <div id="preFooter">
+        <div class="pre-footer-inner">
+          <div class="sqs-layout sqs-grid-12 columns-12 empty" data-layout-label="Pre-Footer Content" data-type="block-field" id="preFooterBlocks"><div class="row sqs-row"><div class="col sqs-col-12 span-12"></div></div></div>
+        </div>
+      </div>
+
+      <footer id="footer" role="contentinfo">
+        <div class="footer-inner">
+          <div class="nav-wrapper back-to-top-nav"><nav><div class="back-to-top"><a href="#header">Back to Top</a></div></nav></div>
+          
+
+
+          
+          <div class="sqs-layout sqs-grid-12 columns-12 empty" data-layout-label="Footer Content" data-type="block-field" id="footerBlocks"><div class="row sqs-row"><div class="col sqs-col-12 span-12"></div></div></div>
+        </div>
+      </footer>
+
+    </div>
+
+    <script src="https://static1.squarespace.com/static/ta/52a74d9ae4b0253945d2aee9/1052/scripts/site-bundle.js" type="text/javascript"></script>
+    <script data-sqs-type="imageloader-bootstrapper">if(window.ImageLoader) window.ImageLoader.bootstrap({}, document);</script><script>Squarespace.afterBodyLoad(Y);</script><svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none" data-usage="social-icons-svg"><symbol id="reddit-icon" viewBox="0 0 64 64"><path d="M47.8,30.7c0-2.1-1.7-3.8-3.8-3.8c-0.9,0-1.7,0.3-2.4,0.9c-2.3-1.4-5.2-2.4-8.5-2.5l1.7-5.3 l4.6,1.1c0.1,1.6,1.5,3,3.2,3c1.8,0,3.2-1.4,3.2-3.2s-1.4-3.2-3.2-3.2c-1.2,0-2.3,0.7-2.8,1.7l-5.3-1.2c-0.4-0.1-0.9,0.1-1,0.6 l-2.1,6.5c-3.5,0.1-6.7,1-9.1,2.6c-0.7-0.5-1.5-0.9-2.4-0.9c-2.1,0-3.8,1.7-3.8,3.8c0,1.3,0.7,2.5,1.7,3.1c0,0.3-0.1,0.6-0.1,0.9 c0,5.3,6.4,9.6,14.2,9.6s14.2-4.3,14.2-9.6c0-0.3,0-0.6-0.1-0.9C47.2,33.2,47.8,32,47.8,30.7z M42.6,19.4c0.8,0,1.5,0.7,1.5,1.5 c0,0.8-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C41.1,20,41.8,19.4,42.6,19.4z M17.8,30.7c0-1.2,0.9-2.1,2.1-2.1c0.3,0,0.6,0.1,0.9,0.2 c-1.1,0.9-2,2-2.5,3.2C18.1,31.7,17.8,31.2,17.8,30.7z M32,42.6c-6.9,0-12.5-3.5-12.5-7.9s5.6-7.9,12.5-7.9s12.5,3.5,12.5,7.9 S38.9,42.6,32,42.6z M45.6,32.1c-0.5-1.2-1.4-2.3-2.5-3.2c0.3-0.1,0.6-0.2,0.9-0.2c1.2,0,2.1,0.9,2.1,2.1 C46.2,31.2,45.9,31.7,45.6,32.1z M29.4,33.1c0-1.2-1-2.1-2.1-2.1s-2.1,1-2.1,2.1s1,2.2,2.1,2.2S29.4,34.2,29.4,33.1z M36.7,30.9 c-1.2,0-2.1,1-2.1,2.1s1,2.2,2.1,2.2c1.2,0,2.1-1,2.1-2.2S37.9,30.9,36.7,30.9z M36,38.2c-0.8,0.8-2.1,1.1-4,1.1 c-1.9,0-3.2-0.4-4-1.1c-0.3-0.3-0.9-0.3-1.2,0c-0.3,0.3-0.3,0.9,0,1.2c1.1,1.1,2.8,1.6,5.2,1.6c2.4,0,4.1-0.5,5.2-1.6 c0.3-0.3,0.3-0.9,0-1.2C36.9,37.8,36.3,37.8,36,38.2z"/></symbol><symbol id="reddit-mask" viewBox="0 0 64 64"><path d="M32,26.9c-6.9,0-12.5,3.5-12.5,7.9s5.6,7.9,12.5,7.9s12.5-3.5,12.5-7.9S38.9,26.9,32,26.9z M25.2,33.1 c0-1.2,1-2.1,2.1-2.1s2.1,1,2.1,2.1s-1,2.2-2.1,2.2S25.2,34.2,25.2,33.1z M37.2,39.4C36.1,40.5,34.4,41,32,41 c-2.4,0-4.1-0.5-5.2-1.6c-0.3-0.3-0.3-0.9,0-1.2c0.3-0.3,0.9-0.3,1.2,0c0.8,0.8,2.1,1.1,4,1.1c1.9,0,3.2-0.4,4-1.1 c0.3-0.3,0.9-0.3,1.2,0C37.5,38.5,37.5,39,37.2,39.4z M36.7,35.2c-1.2,0-2.1-1-2.1-2.2s1-2.1,2.1-2.1c1.2,0,2.1,1,2.1,2.1 S37.9,35.2,36.7,35.2z M44.1,28.6c-0.3,0-0.6,0.1-0.9,0.2c1.1,0.9,2,2,2.5,3.2c0.3-0.4,0.5-0.8,0.5-1.4 C46.2,29.6,45.2,28.6,44.1,28.6z M20.9,28.8c-0.3-0.1-0.6-0.2-0.9-0.2c-1.2,0-2.1,0.9-2.1,2.1c0,0.5,0.2,1,0.5,1.4 C18.9,30.9,19.8,29.8,20.9,28.8z M42.6,22.3c0.8,0,1.5-0.7,1.5-1.5c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5 C41.1,21.7,41.8,22.3,42.6,22.3z M0,0v64h64V0H0z M46.1,33.9c0,0.3,0.1,0.6,0.1,0.9c0,5.3-6.4,9.6-14.2,9.6S17.8,40,17.8,34.8 c0-0.3,0-0.6,0.1-0.9c-1-0.7-1.7-1.8-1.7-3.1c0-2.1,1.7-3.8,3.8-3.8c0.9,0,1.7,0.3,2.4,0.9c2.4-1.5,5.6-2.5,9.1-2.6l2.1-6.5 c0.1-0.4,0.6-0.7,1-0.6l5.3,1.2c0.5-1,1.6-1.7,2.8-1.7c1.8,0,3.2,1.4,3.2,3.2S44.3,24,42.6,24c-1.7,0-3-1.3-3.2-3L34.8,20l-1.7,5.3 c3.3,0.2,6.2,1.1,8.5,2.5c0.7-0.5,1.5-0.9,2.4-0.9c2.1,0,3.8,1.7,3.8,3.8C47.8,32,47.2,33.2,46.1,33.9z"/></symbol><symbol id="url-icon" viewBox="0 0 64 64"><path d="M40.038 24c2.203 0 4.08.801 5.633 2.404C47.224 27.956 48 29.834 48 32.038c0 2.203-.776 4.106-2.329 5.709-1.552 1.552-3.43 2.328-5.633 2.328h-6.46v-3.08h6.46c1.352 0 2.504-.475 3.455-1.427 1.002-1.002 1.502-2.178 1.502-3.53 0-1.353-.5-2.504-1.502-3.456-.952-1.001-2.103-1.502-3.455-1.502h-6.46V24h6.46zm-14.423 9.615V30.46h12.77v3.155h-12.77zm-5.183-5.033c-.952.952-1.427 2.103-1.427 3.456 0 1.352.475 2.529 1.427 3.53 1.002.952 2.178 1.427 3.53 1.427h6.46v3.08h-6.46c-2.203 0-4.08-.776-5.633-2.329C16.776 36.145 16 34.241 16 32.038c0-2.204.776-4.082 2.329-5.634C19.88 24.8 21.759 24 23.962 24h6.46v3.08h-6.46c-1.352 0-2.529.5-3.53 1.502z"/></symbol><symbol id="url-mask" viewBox="0 0 64 64"><path fill-rule="evenodd" clip-rule="evenodd" d="M64 0H0v64h64V0zM45.671 26.404C44.12 24.8 42.241 24 40.038 24h-6.46v3.08h6.46c1.352 0 2.504.5 3.455 1.502 1.002.952 1.502 2.103 1.502 3.456 0 1.352-.5 2.529-1.502 3.53-.952.952-2.103 1.427-3.455 1.427h-6.46v3.08h6.46c2.203 0 4.08-.776 5.633-2.329C47.224 36.145 48 34.241 48 32.038c0-2.204-.776-4.082-2.329-5.634zm-7.286 4.056h-12.77v3.155h12.77V30.46zm-19.38 1.578c0-1.353.475-2.504 1.427-3.456 1.002-1.001 2.178-1.502 3.53-1.502h6.46V24h-6.46c-2.203 0-4.08.801-5.633 2.404C16.776 27.956 16 29.834 16 32.038c0 2.203.776 4.106 2.329 5.709 1.552 1.552 3.43 2.328 5.633 2.328h6.46v-3.08h-6.46c-1.352 0-2.529-.475-3.53-1.427-.952-1.002-1.427-2.178-1.427-3.53z"/></symbol><symbol id="url-icon" viewBox="0 0 64 64"><path d="M40.038 24c2.203 0 4.08.801 5.633 2.404C47.224 27.956 48 29.834 48 32.038c0 2.203-.776 4.106-2.329 5.709-1.552 1.552-3.43 2.328-5.633 2.328h-6.46v-3.08h6.46c1.352 0 2.504-.475 3.455-1.427 1.002-1.002 1.502-2.178 1.502-3.53 0-1.353-.5-2.504-1.502-3.456-.952-1.001-2.103-1.502-3.455-1.502h-6.46V24h6.46zm-14.423 9.615V30.46h12.77v3.155h-12.77zm-5.183-5.033c-.952.952-1.427 2.103-1.427 3.456 0 1.352.475 2.529 1.427 3.53 1.002.952 2.178 1.427 3.53 1.427h6.46v3.08h-6.46c-2.203 0-4.08-.776-5.633-2.329C16.776 36.145 16 34.241 16 32.038c0-2.204.776-4.082 2.329-5.634C19.88 24.8 21.759 24 23.962 24h6.46v3.08h-6.46c-1.352 0-2.529.5-3.53 1.502z"/></symbol><symbol id="url-mask" viewBox="0 0 64 64"><path fill-rule="evenodd" clip-rule="evenodd" d="M64 0H0v64h64V0zM45.671 26.404C44.12 24.8 42.241 24 40.038 24h-6.46v3.08h6.46c1.352 0 2.504.5 3.455 1.502 1.002.952 1.502 2.103 1.502 3.456 0 1.352-.5 2.529-1.502 3.53-.952.952-2.103 1.427-3.455 1.427h-6.46v3.08h6.46c2.203 0 4.08-.776 5.633-2.329C47.224 36.145 48 34.241 48 32.038c0-2.204-.776-4.082-2.329-5.634zm-7.286 4.056h-12.77v3.155h12.77V30.46zm-19.38 1.578c0-1.353.475-2.504 1.427-3.456 1.002-1.001 2.178-1.502 3.53-1.502h6.46V24h-6.46c-2.203 0-4.08.801-5.633 2.404C16.776 27.956 16 29.834 16 32.038c0 2.203.776 4.106 2.329 5.709 1.552 1.552 3.43 2.328 5.633 2.328h6.46v-3.08h-6.46c-1.352 0-2.529-.475-3.53-1.427-.952-1.002-1.427-2.178-1.427-3.53z"/></symbol><symbol id="twitter-unauth-icon" viewBox="0 0 64 64"><path d="M48,22.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6 C41.7,19.8,40,19,38.2,19c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5c-5.5-0.3-10.3-2.9-13.5-6.9c-0.6,1-0.9,2.1-0.9,3.3 c0,2.3,1.2,4.3,2.9,5.5c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,2.9,10.1,2.9c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C46,24.5,47.1,23.4,48,22.1z"/></symbol><symbol id="twitter-unauth-mask" viewBox="0 0 64 64"><path d="M0,0v64h64V0H0z M44.7,25.5c0,0.3,0,0.6,0,0.8C44.7,35,38.1,45,26.1,45c-3.7,0-7.2-1.1-10.1-2.9 c0.5,0.1,1,0.1,1.6,0.1c3.1,0,5.9-1,8.2-2.8c-2.9-0.1-5.3-2-6.1-4.6c0.4,0.1,0.8,0.1,1.2,0.1c0.6,0,1.2-0.1,1.7-0.2 c-3-0.6-5.3-3.3-5.3-6.4c0,0,0-0.1,0-0.1c0.9,0.5,1.9,0.8,3,0.8c-1.8-1.2-2.9-3.2-2.9-5.5c0-1.2,0.3-2.3,0.9-3.3 c3.2,4,8.1,6.6,13.5,6.9c-0.1-0.5-0.2-1-0.2-1.5c0-3.6,2.9-6.6,6.6-6.6c1.9,0,3.6,0.8,4.8,2.1c1.5-0.3,2.9-0.8,4.2-1.6 c-0.5,1.5-1.5,2.8-2.9,3.6c1.3-0.2,2.6-0.5,3.8-1C47.1,23.4,46,24.5,44.7,25.5z"/></symbol></svg>
+
+  </body>
+</html>

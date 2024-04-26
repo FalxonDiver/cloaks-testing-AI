@@ -1,0 +1,838 @@
+<!doctype html>
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US"  class="touch-styles">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- This is Squarespace. --><!-- koala-gazelle-6pxg -->
+<base href="">
+<meta charset="utf-8" />
+<title>Dressing the Full-Body Avatar &mdash; Rec Room Developer Blog</title>
+<meta http-equiv="Accept-CH" content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" /><link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1604698533321-IXH1ZOV8NF2K19JRN9YE/favicon.ico"/>
+<link rel="canonical" href="https://blog.recroom.com/posts/avatars2"/>
+<meta property="og:site_name" content="Rec Room Developer Blog"/>
+<meta property="og:title" content="Dressing the Full-Body Avatar &mdash; Rec Room Developer Blog"/>
+<meta property="og:latitude" content="40.7207559"/>
+<meta property="og:longitude" content="-74.0007613"/>
+<meta property="og:locality" content=""/>
+<meta property="og:url" content="https://blog.recroom.com/posts/avatars2"/>
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="One of the main reasons we're developing the full-body avatar option is to give you even more ways to express yourself in Rec Room! We believe one big part of how you express yourself comes from the clothing that you wear. As we said in   our last dev blog  , the full-body option will support all ex"/>
+<meta property="og:image" content="http://static1.squarespace.com/static/5fa5929d1cf2d45763f942cf/5fa594821cf2d45763f96a60/63e555a4c20d0201ee547fab/1690821601395/chrome_KkAJ5Cxqh9.png?format=1500w"/>
+<meta property="og:image:width" content="1500"/>
+<meta property="og:image:height" content="900"/>
+<meta itemprop="name" content="Dressing the Full-Body Avatar — Rec Room Developer Blog"/>
+<meta itemprop="url" content="https://blog.recroom.com/posts/avatars2"/>
+<meta itemprop="description" content="One of the main reasons we're developing the full-body avatar option is to give you even more ways to express yourself in Rec Room! We believe one big part of how you express yourself comes from the clothing that you wear. As we said in   our last dev blog  , the full-body option will support all ex"/>
+<meta itemprop="thumbnailUrl" content="http://static1.squarespace.com/static/5fa5929d1cf2d45763f942cf/5fa594821cf2d45763f96a60/63e555a4c20d0201ee547fab/1690821601395/chrome_KkAJ5Cxqh9.png?format=1500w"/>
+<link rel="image_src" href="http://static1.squarespace.com/static/5fa5929d1cf2d45763f942cf/5fa594821cf2d45763f96a60/63e555a4c20d0201ee547fab/1690821601395/chrome_KkAJ5Cxqh9.png?format=1500w" />
+<meta itemprop="image" content="http://static1.squarespace.com/static/5fa5929d1cf2d45763f942cf/5fa594821cf2d45763f96a60/63e555a4c20d0201ee547fab/1690821601395/chrome_KkAJ5Cxqh9.png?format=1500w"/>
+<meta itemprop="author" content="Coach"/>
+<meta itemprop="datePublished" content="2023-02-10T11:00:00-0800"/>
+<meta itemprop="dateModified" content="2023-07-31T09:40:01-0700"/>
+<meta itemprop="headline" content="Dressing the Full-Body Avatar"/>
+<meta itemprop="publisher" content="Rec Room Developer Blog"/>
+<meta name="twitter:title" content="Dressing the Full-Body Avatar — Rec Room Developer Blog"/>
+<meta name="twitter:image" content="http://static1.squarespace.com/static/5fa5929d1cf2d45763f942cf/5fa594821cf2d45763f96a60/63e555a4c20d0201ee547fab/1690821601395/chrome_KkAJ5Cxqh9.png?format=1500w"/>
+<meta name="twitter:url" content="https://blog.recroom.com/posts/avatars2"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="One of the main reasons we're developing the full-body avatar option is to give you even more ways to express yourself in Rec Room! We believe one big part of how you express yourself comes from the clothing that you wear. As we said in   our last dev blog  , the full-body option will support all ex"/>
+<meta name="description" content="" />
+<link rel="preconnect" href="https://images.squarespace-cdn.com">
+<script type="text/javascript" src="//use.typekit.net/ik/vNoWLwml6bBuecCU-BAGHUemF45O_iftarMJ692xmDwfelIIfFHN4UJLFRbh52jhWDmcjQ9owR8qwAFcwcbXFQShwhjoF24RZy79MkG0jAFu-WsoShFGZAsude80ZkoRdhXCHKoyjamTiY8Djhy8ZYmC-Ao1Oco8if37OcBDOcu8OfG0-hNydeIlZhBEZAUCZPXhSYy1O1FUiABkZWF3jAF8OcFzdP37O1FUiABkZWF3jAF8ShFGZAsude80ZkoRdhXCjAFu-WsoShFGZAsude80ZkoRdhXCjAFu-WsoShFGZAsude80Zko0ZWbCjWw0dA9CjcUzZkokZAFkdhNlOcFzdPUndhBCjPu1jWT8deU8OQZ3peS0SaBujW48Sagyjh90jhNlOeUzjhBC-eNDifUDSWmyScmDSeBRZWFR-emqiAUTdcS0jhNlOYiaikoyjamTiY8Djhy8ZYmC-Ao1OcFzdPUaiaS0jAFu-WsoShFGZAsude80Zko0ZWbCiaiaOcBDOcu8OYiaikoKdeN1O148ja4zdhX0jhNlOYiaikondhBCjPu1jWT8deU8OQZ3peS0SaBujW48Sagyjh90jhNlOYiaikoDSWmyScmDSeBRZWFR-emqiAUTdcS0jhNlJ68ciWsuScIlSYbKgcmuScN3jPG4fJZmIMMjMkMfH6qJyB9bMg6IJMJ7fbRxmgMMeM96MKG4f54oIMMjgKMfH6qJ6m9bMg6YJMJ7fbKMmsMMeMv6MKG4fJ4mIMMjIPMfH6qJ7WqbMs62JMJ7fbKGpsMgeMS6MKGHf55eMsMgeMX6MKGHf5AeMsMgegI6MTMg3lOHxb9.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript" crossorigin="anonymous" nomodule="nomodule" src="//assets.squarespace.com/@sqs/polyfiller/1.6/legacy.js"></script>
+<script type="text/javascript" crossorigin="anonymous" src="//assets.squarespace.com/@sqs/polyfiller/1.6/modern.js"></script>
+<script type="text/javascript">SQUARESPACE_ROLLUPS = {};</script>
+<script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/extract-css-runtime-decb3a0d2f580e9c24e4-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-extract_css_runtime');</script>
+<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/extract-css-runtime-decb3a0d2f580e9c24e4-min.en-US.js" ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/extract-css-moment-js-vendor-6f117db4eb7fd4392375-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-extract_css_moment_js_vendor');</script>
+<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/extract-css-moment-js-vendor-6f117db4eb7fd4392375-min.en-US.js" ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/cldr-resource-pack-e94539391642d3b99900-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-cldr_resource_pack');</script>
+<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/cldr-resource-pack-e94539391642d3b99900-min.en-US.js" ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-70736932c490ae0713e6-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-common_vendors_stable');</script>
+<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-70736932c490ae0713e6-min.en-US.js" ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/common-vendors-24ffb21b424f235e16e6-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-common_vendors');</script>
+<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/common-vendors-24ffb21b424f235e16e6-min.en-US.js" ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/common-84768f53feefc7100306-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-common');</script>
+<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/common-84768f53feefc7100306-min.en-US.js" ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/performance-1954d7801b9fe28cb073-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-performance');</script>
+<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/performance-1954d7801b9fe28cb073-min.en-US.js" defer ></script><script data-name="static-context">Static = window.Static || {}; Static.SQUARESPACE_CONTEXT = {"facebookAppId":"314192535267336","facebookApiVersion":"v6.0","rollups":{"squarespace-announcement-bar":{"js":"//assets.squarespace.com/universal/scripts-compressed/announcement-bar-4789a12096f1297e4c1b-min.en-US.js"},"squarespace-audio-player":{"css":"//assets.squarespace.com/universal/styles-compressed/audio-player-9fb16b1675c0ff315dae-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/audio-player-db745857afb2ec3ffb4f-min.en-US.js"},"squarespace-blog-collection-list":{"css":"//assets.squarespace.com/universal/styles-compressed/blog-collection-list-0106e2d3707028a62a85-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/blog-collection-list-0ac0afef4825691a4645-min.en-US.js"},"squarespace-calendar-block-renderer":{"css":"//assets.squarespace.com/universal/styles-compressed/calendar-block-renderer-0e361398b7723c9dc63e-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/calendar-block-renderer-9e7074f1bb18f7222944-min.en-US.js"},"squarespace-chartjs-helpers":{"css":"//assets.squarespace.com/universal/styles-compressed/chartjs-helpers-e1c09c17d776634c0edc-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/chartjs-helpers-65c9630464ac844f013c-min.en-US.js"},"squarespace-comments":{"css":"//assets.squarespace.com/universal/styles-compressed/comments-24b74a0326eae0cd5049-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/comments-9b34dfd319c824fabec4-min.en-US.js"},"squarespace-custom-css-popup":{"css":"//assets.squarespace.com/universal/styles-compressed/custom-css-popup-428274a2711c6437783f-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/custom-css-popup-b766d6545189551b5307-min.en-US.js"},"squarespace-dialog":{"css":"//assets.squarespace.com/universal/styles-compressed/dialog-081be79078914b908a1a-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/dialog-fe64d18b463750f00fa8-min.en-US.js"},"squarespace-events-collection":{"css":"//assets.squarespace.com/universal/styles-compressed/events-collection-0e361398b7723c9dc63e-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/events-collection-93991cf619906e47c736-min.en-US.js"},"squarespace-form-rendering-utils":{"js":"//assets.squarespace.com/universal/scripts-compressed/form-rendering-utils-f5feb8e07e62e77fe5b8-min.en-US.js"},"squarespace-forms":{"css":"//assets.squarespace.com/universal/styles-compressed/forms-8d93ba2c12ff0765b64c-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/forms-456f8a096c32579b1685-min.en-US.js"},"squarespace-gallery-collection-list":{"css":"//assets.squarespace.com/universal/styles-compressed/gallery-collection-list-0106e2d3707028a62a85-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/gallery-collection-list-4015fa07502fd85cce51-min.en-US.js"},"squarespace-image-zoom":{"css":"//assets.squarespace.com/universal/styles-compressed/image-zoom-0106e2d3707028a62a85-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/image-zoom-9c7b93bd6c6eec5cef37-min.en-US.js"},"squarespace-pinterest":{"css":"//assets.squarespace.com/universal/styles-compressed/pinterest-0106e2d3707028a62a85-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/pinterest-0e346e0a347887bb4ffd-min.en-US.js"},"squarespace-popup-overlay":{"css":"//assets.squarespace.com/universal/styles-compressed/popup-overlay-b2bf7df4402e207cd72c-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/popup-overlay-4799076ff5857c7e22af-min.en-US.js"},"squarespace-product-quick-view":{"css":"//assets.squarespace.com/universal/styles-compressed/product-quick-view-4aec27f1bd826750e9db-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/product-quick-view-22d395fb29d79725739b-min.en-US.js"},"squarespace-products-collection-item-v2":{"css":"//assets.squarespace.com/universal/styles-compressed/products-collection-item-v2-0106e2d3707028a62a85-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/products-collection-item-v2-4f86cb20877dafd2ae07-min.en-US.js"},"squarespace-products-collection-list-v2":{"css":"//assets.squarespace.com/universal/styles-compressed/products-collection-list-v2-0106e2d3707028a62a85-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/products-collection-list-v2-5869a38a2bb3cda993d1-min.en-US.js"},"squarespace-search-page":{"css":"//assets.squarespace.com/universal/styles-compressed/search-page-dcc0462e30efbd6dc562-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/search-page-f94e3291d677fe675699-min.en-US.js"},"squarespace-search-preview":{"js":"//assets.squarespace.com/universal/scripts-compressed/search-preview-2b67577a9b5c8b3e7ba3-min.en-US.js"},"squarespace-simple-liking":{"css":"//assets.squarespace.com/universal/styles-compressed/simple-liking-a9eb87c1b73b199ce387-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/simple-liking-78c29e2a12a5aa2a2d61-min.en-US.js"},"squarespace-social-buttons":{"css":"//assets.squarespace.com/universal/styles-compressed/social-buttons-98ee3a678d356d849b76-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/social-buttons-5386c2973db284d2c70a-min.en-US.js"},"squarespace-tourdates":{"css":"//assets.squarespace.com/universal/styles-compressed/tourdates-0106e2d3707028a62a85-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/tourdates-0c994a49c22d3424ca65-min.en-US.js"},"squarespace-website-overlays-manager":{"css":"//assets.squarespace.com/universal/styles-compressed/website-overlays-manager-6dfb472f441e39d78b13-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/website-overlays-manager-e40477de1ab3fc552e37-min.en-US.js"}},"pageType":50,"website":{"id":"5fa5929d1cf2d45763f942cf","identifier":"koala-gazelle-6pxg","websiteType":1,"contentModifiedOn":1711654885360,"cloneable":false,"hasBeenCloneable":false,"siteStatus":{},"language":"en-US","timeZone":"America/Los_Angeles","machineTimeZoneOffset":-25200000,"timeZoneOffset":-25200000,"timeZoneAbbr":"PDT","siteTitle":"Rec Room Developer Blog","fullSiteTitle":"Dressing the Full-Body Avatar \u2014 Rec Room Developer Blog","siteTagLine":"Welcome to the Rec Room developer blog.","siteDescription":"","logoImageId":"5fa5953a1cf2d45763f97bcc","socialLogoImageId":"5fa5c1aeeea05a637b08f5b4","shareButtonOptions":{"8":true,"4":true,"2":true,"7":true,"1":true,"3":true,"6":true},"logoImageUrl":"//images.squarespace-cdn.com/content/v1/582e7271bebafbd72792bd97/1571873579729-YGLX8EAT3EP2LIFJ7EZQ/RecRoomLogo_Shadow.png","socialLogoImageUrl":"//images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1604698542397-XV55W2BD8IUBIXTWVXID/OC%2BLANDSCAPE.jpg","authenticUrl":"https://blog.recroom.com","internalUrl":"https://koala-gazelle-6pxg.squarespace.com","baseUrl":"https://blog.recroom.com","primaryDomain":"blog.recroom.com","sslSetting":3,"isHstsEnabled":false,"socialAccounts":[{"serviceId":43,"screenname":"Reddit","addedOn":1604697124266,"profileUrl":"http://reddit.com/r/RecRoom","iconEnabled":true,"serviceName":"reddit"},{"serviceId":74,"screenname":"URL","addedOn":1604697132931,"profileUrl":"http://discord.gg/DQqfpkh","iconEnabled":true,"serviceName":"url"},{"serviceId":74,"screenname":"URL","addedOn":1604697139535,"profileUrl":"http://recroom.canny.io/","iconEnabled":true,"serviceName":"url"},{"serviceId":62,"screenname":"Twitter","addedOn":1604697142589,"profileUrl":"http://twitter.com/recroom","iconEnabled":true,"serviceName":"twitter-unauth"}],"typekitId":"","statsMigrated":false,"imageMetadataProcessingEnabled":false,"captchaSettings":{"enabledForDonations":false},"showOwnerLogin":false},"websiteSettings":{"id":"5fa5929d1cf2d45763f942d2","websiteId":"5fa5929d1cf2d45763f942cf","subjects":[],"country":"US","state":"WA","simpleLikingEnabled":true,"mobileInfoBarSettings":{"isContactEmailEnabled":false,"isContactPhoneNumberEnabled":false,"isLocationEnabled":false,"isBusinessHoursEnabled":false},"commentLikesAllowed":true,"commentAnonAllowed":true,"commentThreaded":true,"commentApprovalRequired":false,"commentAvatarsOn":true,"commentSortType":2,"commentFlagThreshold":0,"commentFlagsAllowed":true,"commentEnableByDefault":true,"commentDisableAfterDaysDefault":0,"disqusShortname":"","commentsEnabled":true,"storeSettings":{"returnPolicy":null,"termsOfService":null,"privacyPolicy":null,"expressCheckout":false,"continueShoppingLinkUrl":"/","useLightCart":false,"showNoteField":false,"shippingCountryDefaultValue":"US","billToShippingDefaultValue":false,"showShippingPhoneNumber":true,"isShippingPhoneRequired":false,"showBillingPhoneNumber":true,"isBillingPhoneRequired":false,"currenciesSupported":["USD","CAD","GBP","AUD","EUR","CHF","NOK","SEK","DKK","NZD","SGD","MXN","HKD","CZK","ILS","MYR","RUB","PHP","PLN","THB","BRL","ARS","COP","IDR","INR","JPY","ZAR"],"defaultCurrency":"USD","selectedCurrency":"USD","measurementStandard":1,"showCustomCheckoutForm":false,"checkoutPageMarketingOptInEnabled":false,"enableMailingListOptInByDefault":false,"sameAsRetailLocation":false,"merchandisingSettings":{"scarcityEnabledOnProductItems":false,"scarcityEnabledOnProductBlocks":false,"scarcityMessageType":"DEFAULT_SCARCITY_MESSAGE","scarcityThreshold":10,"multipleQuantityAllowedForServices":true,"restockNotificationsEnabled":false,"restockNotificationsSuccessText":"","restockNotificationsMailingListSignUpEnabled":false,"relatedProductsEnabled":false,"relatedProductsOrdering":"random","soldOutVariantsDropdownDisabled":false,"productComposerOptedIn":false,"productComposerABTestOptedOut":false,"productReviewsEnabled":false,"displayImportedProductReviewsEnabled":false,"hasOptedToCollectNativeReviews":false},"isLive":false,"multipleQuantityAllowedForServices":true},"useEscapeKeyToLogin":false,"ssBadgeType":1,"ssBadgePosition":4,"ssBadgeVisibility":1,"ssBadgeDevices":1,"pinterestOverlayOptions":{"mode":"disabled"},"ampEnabled":false,"userAccountsSettings":{"loginAllowed":false,"signupAllowed":false}},"cookieSettings":{"isCookieBannerEnabled":false,"isRestrictiveCookiePolicyEnabled":false,"isRestrictiveCookiePolicyAbsolute":false,"cookieBannerText":"","cookieBannerTheme":"","cookieBannerVariant":"","cookieBannerPosition":"","cookieBannerCtaVariant":"","cookieBannerCtaText":"","cookieBannerAcceptType":"OPT_IN","cookieBannerOptOutCtaText":"","cookieBannerHasOptOut":false,"cookieBannerHasManageCookies":true,"cookieBannerManageCookiesLabel":""},"websiteCloneable":false,"collection":{"title":"Blog","id":"5fa594821cf2d45763f96a60","fullUrl":"/","type":1,"permissionType":1},"item":{"title":"Dressing the Full-Body Avatar","id":"63e555a4c20d0201ee547fab","fullUrl":"/posts/avatars2","publicCommentCount":0,"commentState":2,"recordType":1},"subscribed":false,"appDomain":"squarespace.com","templateTweakable":true,"tweakJSON":{"aspect-ratio":"Auto","banner-slideshow-controls":"Arrows","gallery-arrow-style":"No Background","gallery-aspect-ratio":"3:2 Standard","gallery-auto-crop":"true","gallery-autoplay":"false","gallery-design":"Grid","gallery-info-overlay":"Show on Hover","gallery-loop":"false","gallery-navigation":"Bullets","gallery-show-arrows":"true","gallery-transitions":"Fade","galleryArrowBackground":"rgba(34,34,34,1)","galleryArrowColor":"rgba(255,255,255,1)","galleryAutoplaySpeed":"3","galleryCircleColor":"rgba(255,255,255,1)","galleryInfoBackground":"rgba(0, 0, 0, .7)","galleryThumbnailSize":"100px","gridSize":"280px","gridSpacing":"10px","logoContainerWidth":"150px","product-gallery-auto-crop":"false","product-image-auto-crop":"true","siteTitleContainerWidth":"220px","tweak-v1-related-products-title-spacing":"50px"},"templateId":"52a74dafe4b073a80cd253c5","templateVersion":"7","pageFeatures":[1,2,4],"gmRenderKey":"QUl6YVN5Q0JUUk9xNkx1dkZfSUUxcjQ2LVQ0QWVUU1YtMGQ3bXk4","templateScriptsRootUrl":"https://static1.squarespace.com/static/ta/52a74d9ae4b0253945d2aee9/1052/scripts/","betaFeatureFlags":["hide_header_footer_beta","background_art_onboarding","nested_categories_migration_enabled","commerce_subscription_renewal_notifications","hideable_header_footer","campaigns_discount_section_in_blasts","order_status_page_checkout_landing_enabled","pdp_product_add_ons_visitor_site","commerce_etsy_shipping_import","commerce_restock_notifications","send_local_pickup_ready_email","customer_accounts_email_verification","unify_edit_mode_p2","customer_account_creation_recaptcha","donations_panel_refactor","marketing_landing_page","commerce_paywall_renewal_notifications","proposals_beta_in_circle_labs","crm_product_contacts_use_mfe","hideable_header_footer_for_courses","accounting_orders_sync","scripts_defer","crm_redesign_phase_1","fluid_engine_clean_up_grid_contextual_change","campaigns_discount_section_in_automations","campaigns_thumbnail_layout","is_feature_gate_refresh_enabled","commerce_site_visitor_metrics","enable_css_variable_tweaks","i18n_beta_website_locales","commerce_currency_jpy","hideable_header_footer_for_videos","commerce_checkout_website_updates_enabled","viewer-role-contributor-invites","commerce_order_status_access","commsplat_forms_visitor_profile","visitor_react_forms","website_fonts","fluid_engine","campaigns_global_uc_ab","commerce_etsy_product_import","campaigns_import_discounts","toggle_preview_new_shortcut","commerce_clearpay","hideable_header_footer_for_memberareas","campaigns_new_image_layout_picker","google_consent_v2"],"videoAssetsFeatureFlags":["mux-data-video-collection","mux-data-course-collection"],"impersonatedSession":false,"tzData":{"zones":[[-480,"US","P%sT",null]],"rules":{"US":[[1967,2006,null,"Oct","lastSun","2:00","0","S"],[1987,2006,null,"Apr","Sun>=1","2:00","1:00","D"],[2007,"max",null,"Mar","Sun>=8","2:00","1:00","D"],[2007,"max",null,"Nov","Sun>=1","2:00","0","S"]]}},"showAnnouncementBar":false,"recaptchaEnterpriseContext":{"recaptchaEnterpriseSiteKey":"6LdDFQwjAAAAAPigEvvPgEVbb7QBm-TkVJdDTlAv"},"i18nContext":{"timeZoneData":{"id":"America/Los_Angeles","name":"Pacific Time"}},"env":"PRODUCTION"};</script><script>SquarespaceFonts.loadViaContext(); Squarespace.load(window);</script>
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://blog.recroom.com/posts?format=rss" />
+<script type="application/ld+json">{"url":"https://blog.recroom.com","name":"Rec Room Developer Blog","description":"","image":"//images.squarespace-cdn.com/content/v1/582e7271bebafbd72792bd97/1571873579729-YGLX8EAT3EP2LIFJ7EZQ/RecRoomLogo_Shadow.png","@context":"http://schema.org","@type":"WebSite"}</script><script type="application/ld+json">{"name":"Dressing the Full-Body Avatar \u2014 Rec Room Developer Blog","url":"https://blog.recroom.com/posts/avatars2","datePublished":"2023-02-10T11:00:00-0800","dateModified":"2023-07-31T09:40:01-0700","headline":"Dressing the Full-Body Avatar","author":"Coach","publisher":{"name":"Rec Room Developer Blog","logo":{"@type":"ImageObject","url":"https://static1.squarespace.com/static/5fa5929d1cf2d45763f942cf/t/5fa5953a1cf2d45763f97bcc/1711654885360/"},"@context":"http://schema.org","@type":"Organization"},"image":"http://static1.squarespace.com/static/5fa5929d1cf2d45763f942cf/5fa594821cf2d45763f96a60/63e555a4c20d0201ee547fab/1690821601395/chrome_KkAJ5Cxqh9.png?format=1500w","@context":"http://schema.org","@type":"Article"}</script><link rel="stylesheet" type="text/css" href="https://static1.squarespace.com/static/sitecss/5fa5929d1cf2d45763f942cf/58/52a74dafe4b073a80cd253c5/5fa5929d1cf2d45763f942dc/1052/site.css"/><script>
+  
+</script><script>Static.COOKIE_BANNER_CAPABLE = true;</script>
+<!-- End of Squarespace Headers -->
+    <script>/* Must be below squarespace-headers */(function(){var e='ontouchstart'in window||navigator.msMaxTouchPoints;var t=document.documentElement;if(!e&&t){t.className=t.className.replace(/touch-styles/,'')}})()
+    </script>
+  </head>
+  <body id="item-63e555a4c20d0201ee547fab" class="transparent-header enable-nav-button nav-button-style-outline nav-button-corner-style-rounded banner-button-style-raised banner-button-corner-style-rounded banner-slideshow-controls-arrows meta-priority-category center-entry-title--meta  hide-list-entry-footer    hide-blog-sidebar center-navigation--info     event-thumbnails event-thumbnail-size-32-standard event-date-label event-date-label-time event-list-show-cats event-list-date event-list-time event-list-address   event-icalgcal-links  event-excerpts  event-item-back-link    gallery-design-grid aspect-ratio-auto lightbox-style-light gallery-navigation-bullets gallery-info-overlay-show-on-hover gallery-aspect-ratio-32-standard gallery-arrow-style-no-background gallery-transitions-fade gallery-show-arrows gallery-auto-crop   product-list-titles-under product-list-alignment-center product-item-size-11-square product-image-auto-crop product-gallery-size-11-square  show-product-price show-product-item-nav product-social-sharing tweak-v1-related-products-image-aspect-ratio-11-square tweak-v1-related-products-details-alignment-center newsletter-style-dark  opentable-style-light small-button-style-solid small-button-shape-square medium-button-style-outline medium-button-shape-square large-button-style-outline large-button-shape-square image-block-poster-text-alignment-center image-block-card-dynamic-font-sizing image-block-card-content-position-center image-block-card-text-alignment-left image-block-overlap-dynamic-font-sizing image-block-overlap-content-position-center image-block-overlap-text-alignment-left image-block-collage-dynamic-font-sizing image-block-collage-content-position-top image-block-collage-text-alignment-left image-block-stack-dynamic-font-sizing image-block-stack-text-alignment-left button-style-solid button-corner-style-square tweak-product-quick-view-button-style-floating tweak-product-quick-view-button-position-bottom tweak-product-quick-view-lightbox-excerpt-display-truncate tweak-product-quick-view-lightbox-show-arrows tweak-product-quick-view-lightbox-show-close-button tweak-product-quick-view-lightbox-controls-weight-light native-currency-code-usd view-item collection-type-blog collection-layout-default collection-5fa594821cf2d45763f96a60 mobile-style-available has-banner-image item-main-image">
+    <div class="body-overlay"></div>
+    <div class="sqs-announcement-bar-dropzone"></div>
+    <div id="sidecarNav">
+      
+
+  <div id="mobileNavWrapper" class="nav-wrapper" data-content-field="navigation-mobileNav">
+    <nav id="mobileNavigation">
+      
+
+      
+        
+          
+          <div class="external">
+            <a href="/posts/category/Social / Events">
+              Social / Events
+            </a>
+          </div>
+          
+
+        
+
+      
+        
+          
+          <div class="external">
+            <a href="/posts/category/Newsletters">
+              Newsletters
+            </a>
+          </div>
+          
+
+        
+
+      
+        
+          
+          <div class="external">
+            <a href="https://recroom.com/">
+              RecRoom.com
+            </a>
+          </div>
+          
+
+        
+
+      
+    </nav>
+  </div>
+
+
+
+    </div>
+    <div id="siteWrapper" class="clearfix">
+
+      <div class="sqs-cart-dropzone"></div>
+
+      <header id="header" class="show-on-scroll" data-offset-el=".index-section" data-offset-behavior="bottom" role="banner">
+        <div class="header-inner">
+          <div id="logoWrapper" class="wrapper" data-content-field="site-title">
+            
+              <h1 id="logoImage"><a href="/"><img src="//images.squarespace-cdn.com/content/v1/582e7271bebafbd72792bd97/1571873579729-YGLX8EAT3EP2LIFJ7EZQ/RecRoomLogo_Shadow.png?format=1500w" alt="Rec Room Developer Blog" /></a></h1>
+            
+          </div><!--
+          --><div class="mobile-nav-toggle"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></div><div class="mobile-nav-toggle fixed-nav-toggle"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></div><!--
+          --><div id="headerNav">
+
+  <div id="mainNavWrapper" class="nav-wrapper" data-content-field="navigation-mainNav">
+    <nav id="mainNavigation" data-content-field="navigation-mainNav">
+      
+
+      
+        
+          
+          <div class="external">
+            <a href="/posts/category/Social / Events">
+              Social / Events
+            </a>
+          </div>
+          
+
+        
+
+      
+        
+          
+          <div class="external">
+            <a href="/posts/category/Newsletters">
+              Newsletters
+            </a>
+          </div>
+          
+
+        
+
+      
+        
+          
+          <div class="external">
+            <a href="https://recroom.com/">
+              RecRoom.com
+            </a>
+          </div>
+          
+
+        
+
+      
+    </nav>
+  </div>
+  <!-- style below blocks out the mobile nav toggle only when nav is loaded -->
+  <style>.mobile-nav-toggle-label { display: inline-block !important; }</style>
+
+
+</div>
+        </div>
+      </header>
+
+      
+        
+          
+            
+              
+                <div class="banner-thumbnail-wrapper" data-content-field="main-image">
+                  <div class="color-overlay"></div>
+                  <figure id="thumbnail" class="loading content-fill"><img data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1675974281087-N18A8P1U4S1TG6L295YE/chrome_KkAJ5Cxqh9.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1675974281087-N18A8P1U4S1TG6L295YE/chrome_KkAJ5Cxqh9.png" data-image-dimensions="1950x1171" data-image-focal-point="0.5,0.5" alt="Dressing the Full-Body Avatar"  /></figure>
+                  <div class="blog-item-wrapper">
+                    <div class="title-desc-wrapper">
+                      <time class="dt-published published post-date" datetime="2023-02-10" pubdate>February 10, 2023</time>
+                      <div class="post-category"><a href="/?category=Dev+Blogs">Dev Blogs</a></div>
+                      <div class="post-author"><a href="/?author=5fa5c7764b39b4284e32b6a9">Coach</a></div>
+                      <div class="post-title">Dressing the Full-Body Avatar</div>
+                    </div>
+                  </div>
+                </div>
+              
+            
+          
+        
+      
+
+
+      
+      
+      
+
+      <main id="page" role="main">
+        
+        <!--
+        --><!--
+        --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="5fa594821cf2d45763f96a60" data-edit-main-image="">
+         <div class="blog-item">
+
+  
+  <article class="entry h-entry hentry category-dev-blogs author-coach post-type-text featured has-main-image clear" id="article-63e555a4c20d0201ee547fab" data-item-id="63e555a4c20d0201ee547fab">
+
+    <header class="entry-header">
+      <div class="meta-above-title">
+        
+        <div class="entry-byline">
+          <span class="entry-author"><a href="/?author=5fa5c7764b39b4284e32b6a9" class="p-author author entry-byline-link" rel="author">Coach</a></span>
+        </div>
+        
+        <div class="entry-dateline">
+          <time class="dt-published published entry-date" datetime="2023-02-10" pubdate><a href="/posts/avatars2" class="entry-dateline-link">February 10, 2023</a></time>
+          <time class="dt-updated updated" datetime="2023-07-31"></time>
+        </div>
+        
+        <div class="entry-morefrom">
+          <span class="entry-category"><a href="/posts/category/Dev+Blogs" class="entry-morefrom-link" rel="tag">Dev Blogs</a></span>
+        </div>
+        
+      </div>
+      <h1 data-content-field="title" class="entry-title p-name">
+      
+        <a href="/posts/avatars2" class="u-url" rel="bookmark">Dressing the Full-Body Avatar</a>
+      
+      </h1>
+      <div class="meta-below-title ">
+        
+        <div class="entry-byline">
+          <span class="entry-author"><a href="/?author=5fa5c7764b39b4284e32b6a9" class="p-author author entry-byline-link" rel="author">Coach</a></span>
+        </div>
+        
+        <div class="entry-dateline">
+          <time class="dt-published published entry-date" datetime="2023-02-10" pubdate><a href="/posts/avatars2" class="entry-dateline-link">February 10, 2023</a></time>
+          <time class="dt-updated updated" datetime="2023-07-31"></time>
+        </div>
+        
+        <div class="entry-morefrom">
+          <span class="entry-category"><a href="/posts/category/Dev+Blogs" class="entry-morefrom-link" rel="tag">Dev Blogs</a></span>
+        </div>
+        
+      </div>
+    </header>
+
+    <div class="entry-content e-content">
+      
+        <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1675974303224" id="item-63e555a4c20d0201ee547fab"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-75664e97c65889d99266"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <p class="" style="white-space:pre-wrap;">One of the main reasons we're developing the full-body avatar option is to give you even more ways to express yourself in Rec Room! We believe one big part of how you express yourself comes from the clothing that you wear. As we said in <a href="https://blog.recroom.com/posts/avatars"><span style="text-decoration:underline">our last dev blog</span></a>, the full-body option will support all existing avatar items at release. Today we’ll talk about how that will work, and about the new items the full-body will unlock.</p><h2 style="white-space:pre-wrap;"><strong>Converting Torso Items</strong></h2><p class="" style="white-space:pre-wrap;">Sleeves were one of the first parts of dressing the full-body we thought about. None of the existing items have meaningful sleeves since the floating beans don’t have arms, so we had two options - have all tops on the full-body be sleeveless or figure out a smart way to add sleeves to the old items when they are on the full-body. We decided on the latter.&nbsp;</p><p class="" style="white-space:pre-wrap;">To do that we needed to create a universal sleeve design that could apply to the many different styles of torso items Rec Room has to offer. We've created these concept designs, where one of our skilled 3d artists will then take a sleeve style that best matches the base item and cut holes, stitch, and apply color and materials to each item. The end result will be sleeves that look like they were there all along!&nbsp;</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1675974040612_50666"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:2014px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:43.44588088989258%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/22164cdc-a032-4065-9400-5d9f62bb447e/chrome_mE6cw5H76p.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/22164cdc-a032-4065-9400-5d9f62bb447e/chrome_mE6cw5H76p.png" data-image-dimensions="2014x875" data-image-focal-point="0.5,0.5" alt="" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/22164cdc-a032-4065-9400-5d9f62bb447e/chrome_mE6cw5H76p.png" width="2014" height="875" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/22164cdc-a032-4065-9400-5d9f62bb447e/chrome_mE6cw5H76p.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/22164cdc-a032-4065-9400-5d9f62bb447e/chrome_mE6cw5H76p.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/22164cdc-a032-4065-9400-5d9f62bb447e/chrome_mE6cw5H76p.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/22164cdc-a032-4065-9400-5d9f62bb447e/chrome_mE6cw5H76p.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/22164cdc-a032-4065-9400-5d9f62bb447e/chrome_mE6cw5H76p.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/22164cdc-a032-4065-9400-5d9f62bb447e/chrome_mE6cw5H76p.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/22164cdc-a032-4065-9400-5d9f62bb447e/chrome_mE6cw5H76p.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+          
+          <figcaption class="image-caption-wrapper">
+            <div class="image-caption"><p class="" style="white-space:pre-wrap;"><em>All items at release will have a version for floating beans and one for full-bodies. This image shows how we plan to create the latter from the former.</em></p></div>
+          </figcaption>
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1675974040612_51041"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <p class="" style="white-space:pre-wrap;">Once we figured out the plan for sleeves, we had to address the fact that many torso items already included a bit of a “leg item” in them. For example, the tan pants on the hoodies above or the skirt on the jacket dress below. We can’t just extend them all the way down, since we want you to be able to mix and match tops and bottoms so you have greater ability to get your avatar to look like you want it to. So again we’ll turn to our awesome 3d artists.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1675974040612_48295"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:1824px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:63.925437927246094%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/37c90017-9213-4414-9315-c1c714db6f2d/chrome_nm8MIY1tFQ.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/37c90017-9213-4414-9315-c1c714db6f2d/chrome_nm8MIY1tFQ.png" data-image-dimensions="1824x1166" data-image-focal-point="0.5,0.5" alt="" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/37c90017-9213-4414-9315-c1c714db6f2d/chrome_nm8MIY1tFQ.png" width="1824" height="1166" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/37c90017-9213-4414-9315-c1c714db6f2d/chrome_nm8MIY1tFQ.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/37c90017-9213-4414-9315-c1c714db6f2d/chrome_nm8MIY1tFQ.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/37c90017-9213-4414-9315-c1c714db6f2d/chrome_nm8MIY1tFQ.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/37c90017-9213-4414-9315-c1c714db6f2d/chrome_nm8MIY1tFQ.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/37c90017-9213-4414-9315-c1c714db6f2d/chrome_nm8MIY1tFQ.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/37c90017-9213-4414-9315-c1c714db6f2d/chrome_nm8MIY1tFQ.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/37c90017-9213-4414-9315-c1c714db6f2d/chrome_nm8MIY1tFQ.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+          
+          <figcaption class="image-caption-wrapper">
+            <div class="image-caption"><p class="" style="white-space:pre-wrap;"><em>Each torso item will get individual treatment so it looks great on the full body option.</em></p></div>
+          </figcaption>
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1675974040612_48670"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <p class="" style="white-space:pre-wrap;">For some items, like the hoodie, where a leg item is implied, they’ll trim off the bottom bit letting you replace it with whatever it you want. For other items, like the jacket dress, where it’s more all one piece, they’ll leave the bottom bit in place, and you’ll get to choose what you want to wear under it (e.g. a pair of tights).</p><h2 style="white-space:pre-wrap;"><strong>Converting Hand Items</strong></h2><p class="" style="white-space:pre-wrap;">Another bit of anatomy you’ll get with the full-body option is fingers. That means we need to figure out how to make a bunch of items that were made for a wristless mitten-hand work on a hand with five digits that’s attached to an arm.&nbsp;</p><p class="" style="white-space:pre-wrap;">This one is more of a work in progress, but we hope the same principle we used for sleeves will work here. In a sense, we’ll have five little sleeves, one for each finger, that those awesome artists will match to our existing items to turn mittens into gloves.</p><h2 style="white-space:pre-wrap;"><strong>Ironing Out the Wrinkles</strong></h2><p class="" style="white-space:pre-wrap;">While we’ll do our best, converting old items to work with the full-body option won’t be 100% perfect. There will likely be bits that look off or broken at first. But we’ll keep iterating on them until we get all the wrinkles out.</p><p class="" style="white-space:pre-wrap;">And don’t worry, none of these changes will affect the items when floating beans wear them. If you choose to stick with the floating bean avatar your items will look like they always have!</p><h2 style="white-space:pre-wrap;"><strong>New Leg and Foot Items!</strong></h2><p class="" style="white-space:pre-wrap;">Now for the shiny, sparkly new stuff we're really excited to introduce - leg and foot items! We think this new clothing goes a long way to helping you be yourself, or whoever you want to be, in Rec Room.</p><p class="" style="white-space:pre-wrap;">For foot items, we’ll have about four starter options at launch. We’re currently thinking: sneakers, boots, flats, and sandals. Sneakers will likely be the default because it's unsanitary to be walking around the Rec Center in bare feet. We’ll add more foot items as time goes on.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1675974040612_43028"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-none
+          individual-animation-none
+          individual-text-animation-none
+        "
+        data-test="image-block-inline-outer-wrapper"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:1950px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:60.0512809753418%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/456cd189-b83f-416b-8434-0ae0ba40c7d4/chrome_KkAJ5Cxqh9.png" data-image="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/456cd189-b83f-416b-8434-0ae0ba40c7d4/chrome_KkAJ5Cxqh9.png" data-image-dimensions="1950x1171" data-image-focal-point="0.5,0.5" alt="" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/456cd189-b83f-416b-8434-0ae0ba40c7d4/chrome_KkAJ5Cxqh9.png" width="1950" height="1171" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/456cd189-b83f-416b-8434-0ae0ba40c7d4/chrome_KkAJ5Cxqh9.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/456cd189-b83f-416b-8434-0ae0ba40c7d4/chrome_KkAJ5Cxqh9.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/456cd189-b83f-416b-8434-0ae0ba40c7d4/chrome_KkAJ5Cxqh9.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/456cd189-b83f-416b-8434-0ae0ba40c7d4/chrome_KkAJ5Cxqh9.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/456cd189-b83f-416b-8434-0ae0ba40c7d4/chrome_KkAJ5Cxqh9.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/456cd189-b83f-416b-8434-0ae0ba40c7d4/chrome_KkAJ5Cxqh9.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/456cd189-b83f-416b-8434-0ae0ba40c7d4/chrome_KkAJ5Cxqh9.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+          
+          <figcaption class="image-caption-wrapper">
+            <div class="image-caption"><p class="" style="white-space:pre-wrap;"><em>These shoes are for mock-up purposes only, but we’re excited for all the potential foot items. Flippers? Bunny slippers? So many possibilities!</em></p></div>
+          </figcaption>
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" id="block-yui_3_17_2_1_1675974040612_43404"><div class="sqs-block-content">
+
+<div class="sqs-html-content">
+  <p class="" style="white-space:pre-wrap;">Similar to the foot items, we’ll have about four starter leg items and more soon after. We’re thinking about starting with jeans (default), tights, shorts, and a skirt. </p><p class="" style="white-space:pre-wrap;">What else should we add?</p><h2 style="white-space:pre-wrap;"><strong>What’s Next?</strong></h2><p class="" style="white-space:pre-wrap;">We’ll be making lots more of all kinds of items, and might eventually take advantage of other new item slots that the full-body option gives us. No promises, but here are some things we’ve discussed: nail polish, socks, and nose and eyebrow piercings. </p><p class="" style="white-space:pre-wrap;">Let us know what you’d like to see!</p><p class="" style="white-space:pre-wrap;">Also, the work we’re doing under the hood for the full-body option will allow you to make avatar items for each other, but that’s a topic for another dev blog.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div></div></div></div>
+      
+    </div>
+
+    <footer class="entry-footer clear">
+      
+      
+      <div class="entry-actions">
+        
+  <span class="sqs-simple-like" data-item-id="63e555a4c20d0201ee547fab" data-like-count="274">
+    <span class="like-icon"></span>
+    <span class="like-count"></span>
+  </span>
+<span class="squarespace-social-buttons inline-style" data-system-data-id="1675974281087-N18A8P1U4S1TG6L295YE" data-asset-url="https://images.squarespace-cdn.com/content/v1/5fa5929d1cf2d45763f942cf/1675974281087-N18A8P1U4S1TG6L295YE/chrome_KkAJ5Cxqh9.png" data-record-type="1" data-full-url="/posts/avatars2" data-title="Dressing the Full-Body Avatar"></span>
+      </div>
+    </footer>
+
+    
+
+  </article>
+
+  <div id="comments-63e555a4c20d0201ee547fab" class="p-comment">
+    
+  </div>
+
+  
+
+  
+  <nav class="pagination clear">
+    <div class="newer"><span class="prev-label">Newer Post</span><a href="/posts/avatars3" rel="prev"><span>Avatar Embodiment</span></a></div><!-- comment the linebreak between these two elements because science
+  --><div class="older"><span class="next-label">Older Post</span><a href="/posts/avatars" rel="next"><span>The Future of Avatars in Rec Room</span></a></div>
+  </nav>
+  
+
+</div>
+        </div><!--
+        --><aside id="rightSidebar" role="complementary">
+          <div class="sqs-layout sqs-grid-12 columns-12 open-block-field empty" data-layout-label="Blog Sidebar Content" data-type="block-field" id="blogBlocks-5fa594821cf2d45763f96a60"><div class="row sqs-row"><div class="col sqs-col-12 span-12"></div></div></div>
+        </aside>
+        
+        
+      </main>
+
+      <div id="preFooter">
+        <div class="pre-footer-inner">
+          <div class="sqs-layout sqs-grid-12 columns-12 empty" data-layout-label="Pre-Footer Content" data-type="block-field" id="preFooterBlocks"><div class="row sqs-row"><div class="col sqs-col-12 span-12"></div></div></div>
+        </div>
+      </div>
+
+      <footer id="footer" role="contentinfo">
+        <div class="footer-inner">
+          <div class="nav-wrapper back-to-top-nav"><nav><div class="back-to-top"><a href="#header">Back to Top</a></div></nav></div>
+          
+
+
+          
+          <div class="sqs-layout sqs-grid-12 columns-12 empty" data-layout-label="Footer Content" data-type="block-field" id="footerBlocks"><div class="row sqs-row"><div class="col sqs-col-12 span-12"></div></div></div>
+        </div>
+      </footer>
+
+    </div>
+
+    <script src="https://static1.squarespace.com/static/ta/52a74d9ae4b0253945d2aee9/1052/scripts/site-bundle.js" type="text/javascript"></script>
+    <script data-sqs-type="imageloader-bootstrapper">if(window.ImageLoader) window.ImageLoader.bootstrap({}, document);</script><script>Squarespace.afterBodyLoad(Y);</script><svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none" data-usage="social-icons-svg"><symbol id="reddit-icon" viewBox="0 0 64 64"><path d="M47.8,30.7c0-2.1-1.7-3.8-3.8-3.8c-0.9,0-1.7,0.3-2.4,0.9c-2.3-1.4-5.2-2.4-8.5-2.5l1.7-5.3 l4.6,1.1c0.1,1.6,1.5,3,3.2,3c1.8,0,3.2-1.4,3.2-3.2s-1.4-3.2-3.2-3.2c-1.2,0-2.3,0.7-2.8,1.7l-5.3-1.2c-0.4-0.1-0.9,0.1-1,0.6 l-2.1,6.5c-3.5,0.1-6.7,1-9.1,2.6c-0.7-0.5-1.5-0.9-2.4-0.9c-2.1,0-3.8,1.7-3.8,3.8c0,1.3,0.7,2.5,1.7,3.1c0,0.3-0.1,0.6-0.1,0.9 c0,5.3,6.4,9.6,14.2,9.6s14.2-4.3,14.2-9.6c0-0.3,0-0.6-0.1-0.9C47.2,33.2,47.8,32,47.8,30.7z M42.6,19.4c0.8,0,1.5,0.7,1.5,1.5 c0,0.8-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5C41.1,20,41.8,19.4,42.6,19.4z M17.8,30.7c0-1.2,0.9-2.1,2.1-2.1c0.3,0,0.6,0.1,0.9,0.2 c-1.1,0.9-2,2-2.5,3.2C18.1,31.7,17.8,31.2,17.8,30.7z M32,42.6c-6.9,0-12.5-3.5-12.5-7.9s5.6-7.9,12.5-7.9s12.5,3.5,12.5,7.9 S38.9,42.6,32,42.6z M45.6,32.1c-0.5-1.2-1.4-2.3-2.5-3.2c0.3-0.1,0.6-0.2,0.9-0.2c1.2,0,2.1,0.9,2.1,2.1 C46.2,31.2,45.9,31.7,45.6,32.1z M29.4,33.1c0-1.2-1-2.1-2.1-2.1s-2.1,1-2.1,2.1s1,2.2,2.1,2.2S29.4,34.2,29.4,33.1z M36.7,30.9 c-1.2,0-2.1,1-2.1,2.1s1,2.2,2.1,2.2c1.2,0,2.1-1,2.1-2.2S37.9,30.9,36.7,30.9z M36,38.2c-0.8,0.8-2.1,1.1-4,1.1 c-1.9,0-3.2-0.4-4-1.1c-0.3-0.3-0.9-0.3-1.2,0c-0.3,0.3-0.3,0.9,0,1.2c1.1,1.1,2.8,1.6,5.2,1.6c2.4,0,4.1-0.5,5.2-1.6 c0.3-0.3,0.3-0.9,0-1.2C36.9,37.8,36.3,37.8,36,38.2z"/></symbol><symbol id="reddit-mask" viewBox="0 0 64 64"><path d="M32,26.9c-6.9,0-12.5,3.5-12.5,7.9s5.6,7.9,12.5,7.9s12.5-3.5,12.5-7.9S38.9,26.9,32,26.9z M25.2,33.1 c0-1.2,1-2.1,2.1-2.1s2.1,1,2.1,2.1s-1,2.2-2.1,2.2S25.2,34.2,25.2,33.1z M37.2,39.4C36.1,40.5,34.4,41,32,41 c-2.4,0-4.1-0.5-5.2-1.6c-0.3-0.3-0.3-0.9,0-1.2c0.3-0.3,0.9-0.3,1.2,0c0.8,0.8,2.1,1.1,4,1.1c1.9,0,3.2-0.4,4-1.1 c0.3-0.3,0.9-0.3,1.2,0C37.5,38.5,37.5,39,37.2,39.4z M36.7,35.2c-1.2,0-2.1-1-2.1-2.2s1-2.1,2.1-2.1c1.2,0,2.1,1,2.1,2.1 S37.9,35.2,36.7,35.2z M44.1,28.6c-0.3,0-0.6,0.1-0.9,0.2c1.1,0.9,2,2,2.5,3.2c0.3-0.4,0.5-0.8,0.5-1.4 C46.2,29.6,45.2,28.6,44.1,28.6z M20.9,28.8c-0.3-0.1-0.6-0.2-0.9-0.2c-1.2,0-2.1,0.9-2.1,2.1c0,0.5,0.2,1,0.5,1.4 C18.9,30.9,19.8,29.8,20.9,28.8z M42.6,22.3c0.8,0,1.5-0.7,1.5-1.5c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5 C41.1,21.7,41.8,22.3,42.6,22.3z M0,0v64h64V0H0z M46.1,33.9c0,0.3,0.1,0.6,0.1,0.9c0,5.3-6.4,9.6-14.2,9.6S17.8,40,17.8,34.8 c0-0.3,0-0.6,0.1-0.9c-1-0.7-1.7-1.8-1.7-3.1c0-2.1,1.7-3.8,3.8-3.8c0.9,0,1.7,0.3,2.4,0.9c2.4-1.5,5.6-2.5,9.1-2.6l2.1-6.5 c0.1-0.4,0.6-0.7,1-0.6l5.3,1.2c0.5-1,1.6-1.7,2.8-1.7c1.8,0,3.2,1.4,3.2,3.2S44.3,24,42.6,24c-1.7,0-3-1.3-3.2-3L34.8,20l-1.7,5.3 c3.3,0.2,6.2,1.1,8.5,2.5c0.7-0.5,1.5-0.9,2.4-0.9c2.1,0,3.8,1.7,3.8,3.8C47.8,32,47.2,33.2,46.1,33.9z"/></symbol><symbol id="url-icon" viewBox="0 0 64 64"><path d="M40.038 24c2.203 0 4.08.801 5.633 2.404C47.224 27.956 48 29.834 48 32.038c0 2.203-.776 4.106-2.329 5.709-1.552 1.552-3.43 2.328-5.633 2.328h-6.46v-3.08h6.46c1.352 0 2.504-.475 3.455-1.427 1.002-1.002 1.502-2.178 1.502-3.53 0-1.353-.5-2.504-1.502-3.456-.952-1.001-2.103-1.502-3.455-1.502h-6.46V24h6.46zm-14.423 9.615V30.46h12.77v3.155h-12.77zm-5.183-5.033c-.952.952-1.427 2.103-1.427 3.456 0 1.352.475 2.529 1.427 3.53 1.002.952 2.178 1.427 3.53 1.427h6.46v3.08h-6.46c-2.203 0-4.08-.776-5.633-2.329C16.776 36.145 16 34.241 16 32.038c0-2.204.776-4.082 2.329-5.634C19.88 24.8 21.759 24 23.962 24h6.46v3.08h-6.46c-1.352 0-2.529.5-3.53 1.502z"/></symbol><symbol id="url-mask" viewBox="0 0 64 64"><path fill-rule="evenodd" clip-rule="evenodd" d="M64 0H0v64h64V0zM45.671 26.404C44.12 24.8 42.241 24 40.038 24h-6.46v3.08h6.46c1.352 0 2.504.5 3.455 1.502 1.002.952 1.502 2.103 1.502 3.456 0 1.352-.5 2.529-1.502 3.53-.952.952-2.103 1.427-3.455 1.427h-6.46v3.08h6.46c2.203 0 4.08-.776 5.633-2.329C47.224 36.145 48 34.241 48 32.038c0-2.204-.776-4.082-2.329-5.634zm-7.286 4.056h-12.77v3.155h12.77V30.46zm-19.38 1.578c0-1.353.475-2.504 1.427-3.456 1.002-1.001 2.178-1.502 3.53-1.502h6.46V24h-6.46c-2.203 0-4.08.801-5.633 2.404C16.776 27.956 16 29.834 16 32.038c0 2.203.776 4.106 2.329 5.709 1.552 1.552 3.43 2.328 5.633 2.328h6.46v-3.08h-6.46c-1.352 0-2.529-.475-3.53-1.427-.952-1.002-1.427-2.178-1.427-3.53z"/></symbol><symbol id="url-icon" viewBox="0 0 64 64"><path d="M40.038 24c2.203 0 4.08.801 5.633 2.404C47.224 27.956 48 29.834 48 32.038c0 2.203-.776 4.106-2.329 5.709-1.552 1.552-3.43 2.328-5.633 2.328h-6.46v-3.08h6.46c1.352 0 2.504-.475 3.455-1.427 1.002-1.002 1.502-2.178 1.502-3.53 0-1.353-.5-2.504-1.502-3.456-.952-1.001-2.103-1.502-3.455-1.502h-6.46V24h6.46zm-14.423 9.615V30.46h12.77v3.155h-12.77zm-5.183-5.033c-.952.952-1.427 2.103-1.427 3.456 0 1.352.475 2.529 1.427 3.53 1.002.952 2.178 1.427 3.53 1.427h6.46v3.08h-6.46c-2.203 0-4.08-.776-5.633-2.329C16.776 36.145 16 34.241 16 32.038c0-2.204.776-4.082 2.329-5.634C19.88 24.8 21.759 24 23.962 24h6.46v3.08h-6.46c-1.352 0-2.529.5-3.53 1.502z"/></symbol><symbol id="url-mask" viewBox="0 0 64 64"><path fill-rule="evenodd" clip-rule="evenodd" d="M64 0H0v64h64V0zM45.671 26.404C44.12 24.8 42.241 24 40.038 24h-6.46v3.08h6.46c1.352 0 2.504.5 3.455 1.502 1.002.952 1.502 2.103 1.502 3.456 0 1.352-.5 2.529-1.502 3.53-.952.952-2.103 1.427-3.455 1.427h-6.46v3.08h6.46c2.203 0 4.08-.776 5.633-2.329C47.224 36.145 48 34.241 48 32.038c0-2.204-.776-4.082-2.329-5.634zm-7.286 4.056h-12.77v3.155h12.77V30.46zm-19.38 1.578c0-1.353.475-2.504 1.427-3.456 1.002-1.001 2.178-1.502 3.53-1.502h6.46V24h-6.46c-2.203 0-4.08.801-5.633 2.404C16.776 27.956 16 29.834 16 32.038c0 2.203.776 4.106 2.329 5.709 1.552 1.552 3.43 2.328 5.633 2.328h6.46v-3.08h-6.46c-1.352 0-2.529-.475-3.53-1.427-.952-1.002-1.427-2.178-1.427-3.53z"/></symbol><symbol id="twitter-unauth-icon" viewBox="0 0 64 64"><path d="M48,22.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6 C41.7,19.8,40,19,38.2,19c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5c-5.5-0.3-10.3-2.9-13.5-6.9c-0.6,1-0.9,2.1-0.9,3.3 c0,2.3,1.2,4.3,2.9,5.5c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,2.9,10.1,2.9c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C46,24.5,47.1,23.4,48,22.1z"/></symbol><symbol id="twitter-unauth-mask" viewBox="0 0 64 64"><path d="M0,0v64h64V0H0z M44.7,25.5c0,0.3,0,0.6,0,0.8C44.7,35,38.1,45,26.1,45c-3.7,0-7.2-1.1-10.1-2.9 c0.5,0.1,1,0.1,1.6,0.1c3.1,0,5.9-1,8.2-2.8c-2.9-0.1-5.3-2-6.1-4.6c0.4,0.1,0.8,0.1,1.2,0.1c0.6,0,1.2-0.1,1.7-0.2 c-3-0.6-5.3-3.3-5.3-6.4c0,0,0-0.1,0-0.1c0.9,0.5,1.9,0.8,3,0.8c-1.8-1.2-2.9-3.2-2.9-5.5c0-1.2,0.3-2.3,0.9-3.3 c3.2,4,8.1,6.6,13.5,6.9c-0.1-0.5-0.2-1-0.2-1.5c0-3.6,2.9-6.6,6.6-6.6c1.9,0,3.6,0.8,4.8,2.1c1.5-0.3,2.9-0.8,4.2-1.6 c-0.5,1.5-1.5,2.8-2.9,3.6c1.3-0.2,2.6-0.5,3.8-1C47.1,23.4,46,24.5,44.7,25.5z"/></symbol></svg>
+
+  </body>
+</html>
